@@ -1,0 +1,31 @@
+body {
+    font-family: bariol,Helvetica,Arial,Sans-serif;
+    background: #f9f9f9;
+    position: relative;
+    padding-top: 65px;
+}
+.cadastro  span{
+    font-size: 12px;
+    color: #4181e0;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #556ee6;
+    border-color: #556ee6;
+}
+.nav-pills .nav-link {
+    border-radius: 10rem;
+}
+.navtimeline {
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+@media (max-width: 576px) {
+    .navtimeline {
+        padding-left: 5%;
+        padding-right: 5%;
+    
+    }
+  }

@@ -1,0 +1,87 @@
+@media (min-width: 300px) {
+    #nav-dashboard .flex-column {
+        -webkit-box-orient: vertical!important;
+        -webkit-box-direction: normal!important;
+        -ms-flex-direction: column!important;
+        flex-direction: row !important;
+        margin-bottom: 20px;
+
+    }
+
+    .btn-dashboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    .btn-dashboard a{
+        margin: 0 5px;
+    }
+
+    .content.minhaConta .nav a.active {
+        border-left: none;
+        border-bottom: 2px solid #42AEE3;
+        font-weight: bold;
+    }
+
+    .content.minhaConta .lista-carrinho tr td i {
+        width: 30px;
+        height: 30px;
+        line-height: 31px;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        background: #42AEE3;
+        border-radius: 5px;
+        display: block;
+        float: left;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sectionIntro .devices .itens {
+        position: absolute;
+        width: 690px;
+        height: 100px;
+        top: -42px;
+        background: #f9f9f9;
+        left: 42.5%;
+        margin-left: -200px
+    }
+
+    .sectionIntro .devices .itens .item {
+        display: inline-table;
+        width: 100px;
+        margin: 0 15px 15px 15px;
+        height: 100px;
+        text-align: center
+    }
+
+    .sectionIntro .resume {
+        text-align: center;
+        max-width: 990px;
+        margin: 150px auto 0 auto;
+        font-size: 22px;
+        line-height: 22px
+    }
+
+    #nav-dashboard .flex-column {
+        -webkit-box-orient: vertical!important;
+        -webkit-box-direction: normal!important;
+        -ms-flex-direction: column!important;
+        flex-direction: row !important;
+    }
+}
+
+@media (min-width: 1345px) {
+
+    #nav-dashboard .flex-column {
+        -webkit-box-orient: vertical!important;
+        -webkit-box-direction: normal!important;
+        -ms-flex-direction: column!important;
+        flex-direction: column !important;
+    }
+
+}
