@@ -116,11 +116,6 @@ sidebar {
 :root {
   --red: #ED5454; }
 
-body {
-  font-family: Montserrat;
-  font-weight: 100;
-  color: #A8B2B9; }
-
 sidebar {
   background-color: white;
   box-shadow: 5px 0px 20px rgba(0, 0, 0, 0.2); }
