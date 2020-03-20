@@ -13,21 +13,15 @@
   <link rel="stylesheet" href="fontawesome-pro/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  
 
 </head>
 
 <body>
 
 
-  <!-- modal -->
-
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        ...
-      </div>
-    </div>
-  </div>
+  
 
 
 
@@ -42,19 +36,22 @@
           <div class="p-2 bd-highlight">Flex item</div>
         </div> -->
 
-        <div class="navtimeline pt-3 pb-3">
+        <div class="navtimeline pt-5 pb-5">
         <ul class="nav nav-pills d-flex justify-content-between bd-highlight mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item">
+          <li class="nav-item" style="position: relative;">
             <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
               aria-controls="pills-home" aria-selected="true">1</a>
+              <div class="nometimeline">Dados pessoais</div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" style="position: relative;">
             <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
               aria-controls="pills-profile" aria-selected="false">2</a>
+              <div class="nometimeline">Panos</div>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" style="position: relative;">
             <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
               aria-controls="pills-contact" aria-selected="false">3</a>
+              <div class="nometimeline">Pagamento</div>
           </li>
         </ul>
       </div>
@@ -62,103 +59,169 @@
 
     </div>
   </div>
-  <div class="container">
+  <div class="container borderazul">
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <div class="aba1 cadastro">
+
           <div class="">
-            <h4>Informações básicas</h4>
+            
             <div class="row">
-              <div class="col-md-6 pb-2">
-                Email: <span>(Seu login de acesso)</span> <br>
-                <input type="text" id="email" class="form-control form-control-sm" placeholder="Seu e-mail">
+
+              <div class="col-md-6 form-group pb-2">
+                <h4 >Tipo do cadastro? </h4> 
+                 <div class="form-check-inline" >
+                   <input class="form-check-input" type="radio" name="tipocontrato" id="tipocontrato1"  value="igotnone" onclick="show1();" checked>
+                     
+                   <label class="form-check-label" for="exampleRadios1">
+                     Pessoa física:
+                   </label>
+                   <input class="form-check-input ml-4" type="radio" name="tipocontrato" id="tipocontrato" onclick="show2();" >
+                   <label class="form-check-label" for="exampleRadios1">
+                     Pessoa jurídica:
+                   </label>
+                 </div>
+               </div>
+
+              
+              
+              
+              <div id="divjuridico" style="display:none" class="col-md-12">
+                <h4>Dados da empresa</h4>
+                <div class="row pb-2 pb-2">
+                  <div class="col-md-6">
+                    Nome fantasia: <br>
+                    <input type="text" id="nomefantasia" class="form-control " placeholder="Nome fantasia">
+                  </div>
+                  <div class="col-md-3 pb-2 ">
+                    CNPJ:  <br>
+                    <input type="number" class="form-control " id="cnpj" class="form-control " placeholder="CNPJ">
+                  </div>
+                  <div class="col-md-3 pb-2">
+                    Inscrição Estadual: <br>
+                    <div class="form-check-inline">
+                    <input type="text" id="inscricaoestadual" class="form-control " placeholder="Inscrição Estadual">
+                    <input type="checkbox" name="Isento" id="isento" class="m-2" onclick="desabilita('isento')"> Isento
+                  </div>
+                </div>
+
+                </div>
+                <div class="col-md-12 pb-2">  <hr></div> 
+              </div>
+
+              <div class="col-md-12">
+                <h4>Dados pessoais</h4>
               </div>
               <div class="col-md-6 pb-2">
-                CPF ou CNPJ: <span>(Somente números)</span> <br>
-                <input type="text" id="cpf-cnpj" class="form-control form-control-sm" placeholder="CPF ou CNPJ">
-              </div>
-              <div class="col-md-8 pb-2">
                 Nome completo: <br>
-                <input type="text" id="nomecompleto" class="form-control form-control-sm" placeholder=" Nome completo">
-              </div>              
-                <div class="form-group col-md-4 pb-2">
+                <input type="text" id="nomecompleto" class="form-control " placeholder=" Nome completo">
+              </div>   
+                           
+                <div class="form-group col-md-3 pb-2">
                   Sexo: <br>
-                  <select class="form-control form-control-sm" id="sel1">
+                  <select class="form-control " id="sel1">
                     <option>Masculino</option>
                     <option>Feminino</option>
                     <option>Não informar</option>                   
                   </select>
                 </div>
-              <div class="col-md-6 pb-2">
+                <div class="col-md-3"></div>
+              <div class="col-md-3 pb-2">
                 Data de nascimento: <br>
-                <input type="date" id="datadenascimento" class="form-control form-control-sm"
+                <input type="date" id="datadenascimento" class="form-control "
                   placeholder="Data de nascimento">
               </div>
-              <div class="col-md-6 pb-2">
+              <div class="col-md-3 pb-2">
                 Telefone fixo: <br>
-                <input type="text" id="datadenascimento" class="form-control form-control-sm"
+                <input type="text" id="datadenascimento" class="form-control "
                   placeholder="Telefone fixo">
               </div>
-              <div class="col-md-6 pb-2">
+              <div class="col-md-3 pb-2">
                 Telefone celular: <br>
-                <input type="text" id="datadenascimento" class="form-control form-control-sm"
+                <input type="text" id="datadenascimento" class="form-control "
                   placeholder="Telefone celular">
               </div>
-              <div class="col-md-6 pb-2">
+              <div class="col-md-3 pb-2">
                 Preferência de atendimento: <br>
 
                 <div class="form-check-inline">
                   <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
                     checked>
                   <label class="form-check-label" for="exampleRadios1">
-                    Telefone fixo
+                    Tel fixo:
                   </label>
                   <input class="form-check-input ml-4" type="radio" name="exampleRadios" id="exampleRadios1"
                     value="opcao1" checked>
                   <label class="form-check-label" for="exampleRadios1">
-                    Telefone celular
+                    Tel celular:
                   </label>
                 </div>
               </div>
-              <div class="col-md-12">  <hr></div>            
+              <div class="col-md-12">  <hr></div> 
+              <div class="col-md-4 pb-2">
+                E-mail: <span style="font-size: 0.8rem; margin-top: 2rem;"> Seu login de acesso </span><br>
+                <input type="text" id="email" class="form-control " placeholder=" Pessoal ou institucional">
+              </div>
+             
+              <div class="col-md-4 pb-2">
+                Senha: <br>
+                <input type="password" id="senha" class="form-control "
+                  placeholder="Ex: Sua senha" alt="Evite usar nome, data de nascimento, etc">
+              </div>
+
+              <div class="col-md-4 pb-2">
+                Confirmar senha: <br>
+                <input type="password" id="senha2" class="form-control "
+                  placeholder="Ex: Sua senha" alt="Evite usar nome, data de nascimento, etc">
+              </div>
+              <div class="col-md-4 pb-2"></div>
+               <div class="col-md-8 pb-2"><span style="font-size: 0.8rem; margin-top: 2rem;">
+                Escolha uma senha de fácil memorização, utilize pontos e números.</span> </div>
+              
+              <div class="col-md-12">  <hr></div>  
+              <div class="col-md-12"><h4>Endereço</h4></div>          
+              
               <div class="col-md-2 pb-2">
                 Cep: <br>
-                <input name="cep" type="text" id="cep" value="" class="form-control form-control-sm"
+                <input name="cep" type="text" id="cep" value="" class="form-control "
                 placeholder="CEP" />
               </div>
-              <div class="col-md-7 pb-2">
+              <div class="col-md-10"></div>
+              
+              <div class="col-md-6 pb-2">
                 Endereço: <br>
-                <input type="text" id="rua"   class="form-control form-control-sm"
+                <input type="text" id="rua"   class="form-control "
                   placeholder="Onde serão abertos os chamados">
               </div>
-              <div class="col-md-1">
+              <div class="col-md-2">
                 Nº <br>
-                <input type="text" id="numero" class="form-control form-control-sm"
+                <input type="number" id="numero" class="form-control "
                 placeholder="Número">
               </div>
-              <div class="col-md-2">
+              <div class="col-md-4">
                 Complemento:
-                <input type="text" id="complemento" class="form-control form-control-sm"
+                <input type="text" id="complemento" class="form-control "
                 placeholder="Casa, apto, loja">
               </div>              
-              <div class="col-md-3">
+              <div class="col-md-5">
                 Bairro: <br>
-                <input name="bairro" type="text"  id="bairro" class="form-control form-control-sm"
+                <input name="bairro" type="text"  id="bairro" class="form-control "
                 placeholder="Bairro" />
               </div>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 Cidade: <br>
-                <input type="text" id="cidade"  class="form-control form-control-sm"
+                <input type="text" id="cidade"  class="form-control "
                   placeholder="Cidade">
               </div>
-              <div class="col-md-1">
+              
+              <div class="col-md-1 ">
                 UF: <br>
-                <input type="text" id="uf"  class="form-control form-control-sm"
+                <input type="text" id="uf"  class="form-control "
                   placeholder="UF">
               </div>
             </div><!-- fim da row   -->
             <div class="text-right pt-5">
-              <a  class="btn btn-primary btn-sm" id="pills-profile-tab" data-toggle="pill" href="#pills-profile">Próximo</a>
+              <a  class="btn btn-primary " id="pills-profile-tab" data-toggle="pill" href="#pills-profile">Próximo</a>
             </div>
 
 
@@ -166,164 +229,112 @@
 
         </div>
         <!-- fim da aba1 -->
-
-
       </div>
       <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
         
-        <h4 class="pb-5">Escolha seu plano ideal</h4>
-        <!-- <div class="col-md-12"></div>
-          <div class="form-group">
-            Planos: <br>
-            <select class="form-control form-control-sm" id="sel1">
-              <option>Avulso</option>
-              <option>Assinatura anual</option>
-              <option>Premium</option>
-             
-            </select>
-          </div> 
-        </div>-->
+        <h4>Planos</h4>
+        <div class="col-md-12">
+          <div class="row"><!--
+            <div class="col-md-4 mt-4 planos">
+            <input type="radio" name="imagem" id="i1" class="planos hvr-float " />
+            <label for="i1"> <img src="images/plano1.png" class="img-fluid" alt="Escolha o plano avulso"></a></label></div>
 
-        <div class="row">
-         
-           <div class="col-md-4 planos " style="margin-top: -10px;"> <a href="#" class=""data-toggle="modal" data-target=".bd-example-modal-lg">
-            <div class="card  sombra">
-              <div class="card-body">
-                <div class="">
-                  <h4>Anual</h4>
-                  
-                  <h5><span style="font-size: 1.3rem;">R$</span>79<span style="font-size: 1.3rem;">,00</span></h5>
-                  <div class="pb-4" style="font-size: 0.8rem; color: #666; margin-top: -5px;">Por computador / Mês</div>
-                  </div>
-                
-                  <div class="resumoplanos">                   
-                     <ul>
-                      <li><i class="fal fa-check-circle"></i> 15 Projects</li>
-                      <li><i class="fal fa-check-circle"></i> 10GB Storage</li>
-                      <li><i class="fal fa-check-circle"></i> No Time Tracking</li>
-                      <li><i class="fal fa-check-circle"></i> Enhanced Security</li>
-                      <li><i class="fal fa-check-circle"></i> Unlimited Users</li>
-                    </ul>
-                  </div>
+            <div class="col-md-4 planos">
+            <input type="radio" checked name="imagem" id="i2" class="planos"/>
+            <label for="i2"><img src="images/anual.png" class="img-fluid" alt="O melhor custo benefício"></label></div>
+            
+            <div class="col-md-4 mt-4 planos">
+            <input type="radio" name="imagem" id="i3" class="planos"/>
+            <label for="i3"><img src="images/prepago.png" class="img-fluid" alt=" Escolha o plano pré-pago"></label></div>
 
-                  <b></b>
-              </div>
-            </div></a>
+-->
+
+             <div class="col-md-4 mt-4 planos"> <a href="#" class="hvr-bob" data-toggle="modal" data-target="#plano1" >
+              <img src="images/plano1.png" class="img-fluid" alt="Escolha o plano avulso"></a>
+            </div>
+            <div class="col-md-4 planos"><a  href="#" class="hvr-bob" data-toggle="modal" data-target="#plano2">
+              <img src="images/anual.png" class="img-fluid" alt="O melhor custo benefício"></a>
+            </div>
+            
+            <div class="col-md-4 mt-4 planos"><a href="#" class="hvr-bob" data-toggle="modal" data-target="#plano3">
+              <img src="images/prepago.png" class="img-fluid" alt=" Escolha o plano pré-pago"></a>
+            </div> 
+
           </div>
-          
+        </div>
 
-          <div class="col-md-4 planos " style="margin-top: -10px;"> <a href="#" class=""data-toggle="modal" data-target=".bd-example-modal-lg">
-            <div class="card  sombra">
-              <div class="card-body">
-                <div class="">
-                  <h4>Anual</h4>
-                  
-                  <h5><span style="font-size: 1.3rem;">R$</span>79<span style="font-size: 1.3rem;">,00</span></h5>
-                  <div class="pb-4" style="font-size: 0.8rem; color: #666; margin-top: -5px;">Por computador / Mês</div>
-                  </div>
-                
-                  <div class="resumoplanos">                   
-                     <ul>
-                      <li><i class="fal fa-check-circle"></i> 15 Projects</li>
-                      <li><i class="fal fa-check-circle"></i> 10GB Storage</li>
-                      <li><i class="fal fa-check-circle"></i> No Time Tracking</li>
-                      <li><i class="fal fa-check-circle"></i> Enhanced Security</li>
-                      <li><i class="fal fa-check-circle"></i> Unlimited Users</li>
-                    </ul>
-                  </div>
+        <!-- modal -->
 
-                  <b></b>
-              </div>
-            </div></a>
-          </div>
-
-
-          <div class="col-md-4 planos " style="margin-top: -10px;"> <a href="#" class=""data-toggle="modal" data-target=".bd-example-modal-lg">
-            <div class="card  sombra">
-              <div class="card-body">
-                <div class="">
-                  <h4>Anual</h4>
-                  
-                  <h5><span style="font-size: 1.3rem;">R$</span>79<span style="font-size: 1.3rem;">,00</span></h5>
-                  <div class="pb-4" style="font-size: 0.8rem; color: #666; margin-top: -5px;">Por computador / Mês</div>
-                  </div>
-                
-                  <div class="resumoplanos">                   
-                     <ul>
-                      <li><i class="fal fa-check-circle"></i> 15 Projects</li>
-                      <li><i class="fal fa-check-circle"></i> 10GB Storage</li>
-                      <li><i class="fal fa-check-circle"></i> No Time Tracking</li>
-                      <li><i class="fal fa-check-circle"></i> Enhanced Security</li>
-                      <li><i class="fal fa-check-circle"></i> Unlimited Users</li>
-                    </ul>
-                  </div>
-
-                  <b></b>
-              </div>
-            </div></a>
+      <div class="modal fade" tabindex="-1" id="plano1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            Modal1
           </div>
         </div>
       </div>
-      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-        
 
-        <div class="calendar">
-          <div class="calendar__header">
-            <div>mon</div>
-            <div>tue</div>
-            <div>wed</div>
-            <div>thu</div>
-            <div>fri</div>
-            <div>sat</div>
-            <div>sun</div>
+      <div class="modal fade" tabindex="-1" id="plano2" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="container text-center p-5">
+
+              <h4>Quantos computadores deseja assistência?</h4> <br>
+              <div class="p-4 areaselect">
+
+                <div class="div-select">
+                  <select>
+                     <option>Selecione</option>
+                     <option>1 computador</option>
+                     <option>2 computadores</option>
+                     <option>3  computadores</option>
+                     <option>4 computadores</option>
+                     <option>5 computadores</option>
+                     <option>6 computadores</option>
+                     <option>7 computadores</option>
+                     <option>mais de 10</option>
+                  </select>  
+               </div>
+              </div>
+              
+
+            </div>
+            <div class="modal-footer">
+              <a  class="btn btn-primary" id="pills-profile-tab" data-toggle="pill" data-dismiss="modal" href="#pills-contact">Salvar</a>
+              
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
           </div>
-          <div class="calendar__week">
-            <div class="calendar__day day">1</div>
-            <div class="calendar__day day">2</div>
-            <div class="calendar__day day">3</div>
-            <div class="calendar__day day">4</div>
-            <div class="calendar__day day">5</div>
-            <div class="calendar__day day">6</div>
-            <div class="calendar__day day">7</div>
-          </div>
-          <div class="calendar__week">
-            <div class="calendar__day day">8</div>
-            <div class="calendar__day day">9</div>
-            <div class="calendar__day day">10</div>
-            <div class="calendar__day day">11</div>
-            <div class="calendar__day day">12</div>
-            <div class="calendar__day day">13</div>
-            <div class="calendar__day day">14</div>        
-          </div>
-          <div class="calendar__week">
-            <div class="calendar__day day">15</div>
-            <div class="calendar__day day">16</div>
-            <div class="calendar__day day">17</div>
-            <div class="calendar__day day">18</div>
-            <div class="calendar__day day">19</div>
-            <div class="calendar__day day">20</div>
-            <div class="calendar__day day">21</div>    
-          </div>
-          <div class="calendar__week">
-            <div class="calendar__day day">22</div>
-            <div class="calendar__day day">23</div>
-            <div class="calendar__day day">24</div>
-            <div class="calendar__day day">25</div>
-            <div class="calendar__day day">26</div> 
-            <div class="calendar__day day">27</div> 
-            <div class="calendar__day day">28</div> 
-          </div>
-          <div class="calendar__week">
-            <div class="calendar__day day">29</div>
-            <div class="calendar__day day">30</div>
-            <div class="calendar__day day">31</div>
-            <div class="calendar__day day">1</div>
-            <div class="calendar__day day">2</div>
-            <div class="calendar__day day">3</div>
-            <div class="calendar__day day">4</div>
+          
+        </div>
+      </div>
+
+
+      <div class="modal fade" tabindex="-1" id="plano3" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+
+            Modal3
           </div>
         </div>
-  
+      </div>
+
+
+
+
+
+      </div>
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        
+        <div class="col-md-12"></div>
+          <div class="form-group">
+           <h4>Pagamento</h4>
+             <br>
+             módulo de pagamento da VINDI
+          </div> 
+       
+          
+          
+       
 
 
       </div>
@@ -342,6 +353,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous">
+    
   </script>
   <script src="fontawesome-pro/js/all.js"></script>
 
@@ -417,6 +429,35 @@
                 }
             });
         });
+
+        /*mostra e esconde div*/
+       
+        function show1(){
+          document.getElementById('divjuridico').style.display ='none';
+        }
+        function show2(){
+          document.getElementById('divjuridico').style.display = 'block';
+        }
+
+        function desabilita(checkinscricao){
+          var status = document.getElementById('inscricaoestadual').disable;
+          if(checkinscricao == 'sim' &&  !status){
+            document.getElementById('inscricaoestadual').disabled  = true;
+          }else {
+            document.getElementById('inscricaoestadual').disabled  = false;
+          }
+        }
+
+        function desabilitar(valor) {
+        var status = document.getElementById('tel').disabled;
+
+        if (valor == 'sim' && !status) {
+          document.getElementById('tel').disabled = true;
+        } else {
+          document.getElementById('tel').disabled = false;
+        }
+      }
+
 
     </script>
 </body>
