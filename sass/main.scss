@@ -357,6 +357,14 @@ ul > li {
       font-weight: 900;
   }
 }
+
+@media (max-width: 576px) { 
+  .chamadaprecoplanos{
+    height: 222px;
+  }
+}
+
+
 .preco{
   position: relative;
   display: flex;
