@@ -1,6 +1,10 @@
 
 @import 'calendario';
 @import 'animatorhover';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap');
+
+
+
 
 body {
     font-family: bariol,Helvetica,Arial,Sans-serif;
@@ -41,9 +45,9 @@ body {
 }
 .nometimeline {
     position: absolute;
-    left: -28px;
-    font-size: 0.8rem;
-    width: 100px;
+    left: -29px;
+    font-size: 1rem;
+    width: 130px;
 }
 @media (max-width: 576px) {
     .navtimeline {
@@ -65,6 +69,7 @@ body {
     box-shadow: 9px 10px 5px -6px rgba(0,0,0,0.13);
 } 
 .planos {
+    position: relative;
     margin-bottom: 5rem;
     h4{
         color: #000645;
@@ -79,23 +84,133 @@ body {
     text-decoration: none;
    
     }
-
-  .card {
-    border-radius: 10px;
-    border:none;
-    }
-    input[type="radio"] {
-        visibility: hidden;
-    }
-    label {
-    display: block;
-    }
-    input[type="radio"]:checked+label {   
-       
-
-    }
-   
+ 
 }
+
+// .card {
+//   border-radius: 10px;
+//   border:none;
+//   }
+//   input[type="radio"] {
+//       visibility: hidden;
+//   }
+//   label {
+//   display: block;
+//   }
+//   input[type="radio"]:checked+label {   
+     
+
+//   }
+.campoinfo{
+
+  border-radius: 10px;
+  border: 1px solid #f9f9f9;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  padding: 20px;
+  width: 273px;
+  margin-top: -30px;
+  margin-left: 22px;
+    span{
+      font-size: 0.8rem;
+     }
+}
+.botoes {
+    position: relative;
+    margin-bottom: -2rem;
+    padding-top: 10px;
+    font-size: 0.8rem;
+    text-align: center;
+
+}
+.btn-saibamais{
+
+}
+.btn-fale{
+
+}
+
+
+
+.btn-saibamais{
+    color: #fff;
+    background-color: #e83e8c;
+   
+  }
+  
+  .btn-saibamais:hover {
+    color: #fff;
+    background-color: #c7226f;
+  }
+  
+  .btn-saibamais:focus, .btn-saibamais.focus {
+    color: #fff;
+    background-color: #bb0c5e;
+  
+    box-shadow: 0 0 0 0.2rem #c7226f;
+  }
+  
+  .btn-saibamais.disabled, .btn-saibamais:disabled {
+    color: #fff;
+    background-color: #c7226f;
+   
+  }
+  
+  .btn-saibamais:not(:disabled):not(.disabled):active, .btn-saibamais:not(:disabled):not(.disabled).active,
+  .show > .btn-saibamais.dropdown-toggle {
+    color: #fff;
+    background-color: #c7226f;
+    
+  }
+  
+  .btn-saibamais:not(:disabled):not(.disabled):active:focus, .btn-saibamais:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-saibamais.dropdown-toggle:focus {
+    border-color: #4e555b;
+  }
+
+
+
+
+  
+.btn-fale {
+    color: #fff;
+   
+
+    background-color: #1481f2;
+    border-color: #4797ec;
+    
+  }
+  
+  .btn-fale:hover {
+    color: #fff;
+    background-color: #114b8a;   
+  }
+  
+  .btn-fale:focus, .btn-fale.focus {
+    color: #fff;
+    background-color: #114b8a; 
+    box-shadow: #556ee6;
+  }
+  
+  .btn-fale.disabled, .btn-fale:disabled {
+    color: #fff;
+    background-color: #556ee6;
+ 
+  }
+  
+  .btn-fale:not(:disabled):not(.disabled):active, .btn-fale:not(:disabled):not(.disabled).active,
+  .show > .btn-fale.dropdown-toggle {
+    color: #fff;
+    background-color: #556ee6;
+    border-color: #4e555b;
+  }
+  
+  .btn-fale:not(:disabled):not(.disabled):active:focus, .btn-fale:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-fale.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+  }
+
+
 
 /*conteúdo modal */
 
@@ -125,5 +240,157 @@ body {
   justify-content: center;
 }
 
+// includes
+@mixin divtitulo{
+  padding: 5px;
+  list-style: none;
+  border-radius: 10px 10px 0px 0px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+// includes
+@mixin divtitulo{
+  padding: 5px;
+  list-style: none;
+  border-radius: 10px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.azul {
+  background: #1373bf;
+  color: #fff;
+  @include divtitulo();
+}
+.verde1 {
+  background: #00a79d;
+  color: #fff;
+  @include divtitulo();
+}
+.verde2 {
+  background: #8cc731;
+  color: #fff;
+  @include divtitulo();
+}
+.laranja {
+  background: #feb02f;
+  color: #fff;
+  @include divtitulo();
+}
+.laranja2 {
+  background: #f45918;
+  color: #fff;
+  @include divtitulo();
+}
+.marrom {
+  background: #c55a11;
+  color: #fff;
+  @include divtitulo();
+}
 
 
+.tituloaba {
+  text-align: center;
+  font-size: 0.7rem;
+  h5{
+    font-size: 1rem !important;
+  }
+}
+.abasuporte{
+
+}
+
+
+.textexpliactivo{
+  padding: 10px;
+  background: #efeded;
+  text-align: center;
+  font-size: 0.8rem;
+  min-height: 140px;
+
+}
+.precodetalhes{
+  background: #bababa;
+  color: #1373bf;
+  padding: 15px;
+  border-radius:  0px 0px 10px 10px;
+}
+ul > li {
+  list-style: none;
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  display: block;
+  padding: 1.5rem 2rem;
+}
+
+
+.cardplanos{
+  
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.19);
+    min-height: 445px;
+    z-index: 87;
+    color: #1481f2;
+
+
+  
+}
+
+
+.chamadaprecoplanos{
+  background: url('../images/bg-top-planos.png') no-repeat bottom;
+  background-size: contain;
+  height: 207px;
+  color: #fff;
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+  }
+}
+.preco{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -14px !important;
+ 
+
+    span{
+     
+      float: left;
+      font-size: 1.3rem;
+      
+    }
+    h2{
+      float: left;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+    }
+
+}
+.listaservicos {
+  color: #1481f2;
+  ul {
+    margin-left: -30px;
+    line-height: 1.8rem;
+  }
+  li {
+    font-size: 1rem;
+    color: #1481f2;
+  }
+  p span {
+    font-size: 0.9rem;
+    color: #1481f2;
+  }
+}

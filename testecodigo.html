@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style type= "text/css ">
+    div{
+    border: solid 2px;
+    width: 500px;
+    height: 300px;
+    }
+    </style>
+</head>
+<body>
+
+
+    <a href="#" onclick="mostrar_abas(this);" id="mostra_aba1" >Mostra Aba 1</a> |
+    <a href="#" onclick="mostrar_abas(this);" id="mostra_aba2" >Mostra Aba 2</a> |
+    <a href="#" onclick="mostrar_abas(this);" id="mostra_aba3" >Mostra Aba 3</a> |
+    <a href="#" onclick="mostrar_abas(this);" id="mostra_aba4" >Mostra Aba 4</a>
+    <p></p>
+    
+<!-- abas -->
+<div id="div_aba1" style="display:none;">
+    Conteúdo da aba 1
+    </div>
+    <div id="div_aba2" style="display:none;">
+    Conteúdo da aba 2
+    </div>
+    <div id="div_aba3" style="display:none;">
+    Conteúdo da aba 3
+    </div>
+    <div id="div_aba4" style="display:none;">
+    Conteúdo da aba 4
+    </div>
+
+
+    <script>
+        function mostrar_abas(obj) {
+        
+              document.getElementById('div_aba1').style.display="none";
+              document.getElementById('div_aba2').style.display="none";
+              document.getElementById('div_aba3').style.display="none";
+              document.getElementById('div_aba4').style.display="none";
+        
+           switch (obj.id) {
+              case 'mostra_aba1':
+              document.getElementById('div_aba1').style.display="block";
+              break
+              case 'mostra_aba2':
+              document.getElementById('div_aba2').style.display="block";
+              break
+              case 'mostra_aba3':
+              document.getElementById('div_aba3').style.display="block";
+              break
+              case 'mostra_aba4':
+              document.getElementById('div_aba4').style.display="block";
+              break
+           }
+        }
+        
+        </script>
+    
+</body>
+</html>
