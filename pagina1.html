@@ -1,605 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cadastro de novos usuários</title>
 
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="fontawesome-pro/css/all.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de novos usuários</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="fontawesome-pro/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
-<div class="col-md-12">
-  <div class="text-center"> Criar uma nova conta
-    <div class="container"> 
-      
-      <!-- <div class="d-flex justify-content-between bd-highlight mb-3">
+  <div class="col-md-12">
+    <div class="text-center"> Criar uma nova conta
+      <div class="container">
+
+        <!-- <div class="d-flex justify-content-between bd-highlight mb-3">
           <div class="p-2 bd-highlight">Flex item</div>
           <div class="p-2 bd-highlight">Flex item</div>
           <div class="p-2 bd-highlight">Flex item</div>
         </div> -->
-      
-      <div class="navtimeline pt-5 pb-5">
-        <ul class="nav nav-pills d-flex justify-content-between bd-highlight mb-3" id="pills-tab" role="tablist">
-          <li class="nav-item" style="position: relative;"> <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
-                aria-controls="pills-home" aria-selected="true">1</a>
-            <div class="nometimeline">Dados pessoais</div>
-          </li>
-          <li class="nav-item" style="position: relative;"> <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
-                aria-controls="pills-profile" aria-selected="false">2</a>
-            <div class="nometimeline">Panos</div>
-          </li>
-          <li class="nav-item" style="position: relative;"> <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
-                aria-controls="pills-contact" aria-selected="false">3</a>
-            <div class="nometimeline">Pagamento</div>
-          </li>
-        </ul>
+
+        <div class="navtimeline pt-5 pb-5">
+          <ul class="nav nav-pills d-flex justify-content-between bd-highlight mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" style="position: relative;"> <a class="nav-link active" id="pills-home-tab"
+                data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">1</a>
+              <div class="nometimeline">Dados pessoais</div>
+            </li>
+            <li class="nav-item" style="position: relative;"> <a class="nav-link" id="pills-profile-tab"
+                data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+                aria-selected="false">2</a>
+              <div class="nometimeline">Planos</div>
+            </li>
+            <li class="nav-item" style="position: relative;"> <a class="nav-link" id="pills-contact-tab"
+                data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact"
+                aria-selected="false">3</a>
+              <div class="nometimeline">Pagamento</div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="container borderazul">
-  <div class="tab-content" id="pills-tabContent">
-    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-      <div class="aba1 cadastro">
-        <div class="">
-          <div class="row">
-            <div class="col-md-6 form-group pb-2">
-              <h4>Tipo do cadastro? </h4>
-              <div class="form-check-inline">
-                <input class="form-check-input" type="radio" name="tipocontrato" id="tipocontrato1" value="igotnone"
+  <div class="container borderazul">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="aba1 cadastro">
+          <div class="">
+            <div class="row">
+              <div class="col-md-6 form-group pb-2">
+                <h4 class="tituloazul">Tipo do cadastro? </h4>
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="tipocontrato" id="tipocontrato1" value="igotnone"
                     onclick="show1();" checked>
-                <label class="form-check-label" for="exampleRadios1"> Pessoa física: </label>
-                <input class="form-check-input ml-4" type="radio" name="tipocontrato" id="tipocontrato"
+                  <label class="form-check-label" for="exampleRadios1"> Pessoa física: </label>
+                  <input class="form-check-input ml-4" type="radio" name="tipocontrato" id="tipocontrato"
                     onclick="show2();">
-                <label class="form-check-label" for="exampleRadios1"> Pessoa jurídica: </label>
-              </div>
-            </div>
-            <div id="divjuridico" style="display:none" class="col-md-12">
-              <h4>Dados da empresa</h4>
-              <div class="row pb-2 pb-2">
-                <div class="col-md-6"> Nome fantasia: <br>
-                  <input type="text" id="nomefantasia" class="form-control " placeholder="Nome fantasia">
-                </div>
-                <div class="col-md-3 pb-2 "> CNPJ: <br>
-                  <input type="number" class="form-control " id="cnpj" class="form-control " placeholder="CNPJ">
-                </div>
-                <div class="col-md-3 pb-2"> Inscrição Estadual: <br>
-                  <div class="form-check-inline">
-                    <input type="text" id="inscricaoestadual" class="form-control " placeholder="Inscrição Estadual">
-                    <input type="checkbox" name="Isento" id="isento" class="m-2" onclick="desabilita('isento')">
-                    Isento </div>
+                  <label class="form-check-label" for="exampleRadios1"> Pessoa jurídica: </label>
                 </div>
               </div>
-              <div class="col-md-12 pb-2">
-                <hr>
+              <div id="divjuridico" style="display:none" class="col-md-12">
+                <h4 class="tituloazul">Dados da empresa</h4>
+                <div class="row pb-2 pb-2">
+                  <div class="col-md-6"> Nome fantasia: <br>
+                    <input type="text" id="nomefantasia" class="form-control " placeholder="Nome fantasia">
+                  </div>
+                  <div class="col-md-3 pb-2 "> CNPJ: <br>
+                    <input type="number" class="form-control " id="cnpj" class="form-control " placeholder="CNPJ">
+                  </div>
+                  <div class="col-md-3 pb-2"> Inscrição Estadual: <br>
+                    <div class="form-check-inline">
+                      <input type="text" id="inscricaoestadual" class="form-control " placeholder="Inscrição Estadual">
+                      <input type="checkbox" name="Isento" id="isento" class="m-2" onclick="desabilita('isento')">
+                      Isento </div>
+                  </div>
+                </div>
+                <div class="col-md-12 pb-2">
+                  <hr>
+                </div>
               </div>
-            </div>
-            <div class="col-md-12">
-              <h4>Dados pessoais</h4>
-            </div>
-            <div class="col-md-6 pb-2"> Nome completo: <br>
-              <input type="text" id="nomecompleto" class="form-control " placeholder=" Nome completo">
-            </div>
-            <div class="form-group col-md-3 pb-2"> Sexo: <br>
-              <select class="form-control " id="sel1">
-                <option>Masculino</option>
-                <option>Feminino</option>
-                <option>Não informar</option>
-              </select>
-            </div>
-            <div class="col-md-3"></div>
-            <div class="col-md-3 pb-2"> Data de nascimento: <br>
-              <input type="date" id="datadenascimento" class="form-control " placeholder="Data de nascimento">
-            </div>
-            <div class="col-md-3 pb-2"> Telefone fixo: <br>
-              <input type="text" id="datadenascimento" class="form-control " placeholder="Telefone fixo">
-            </div>
-            <div class="col-md-3 pb-2"> Telefone celular: <br>
-              <input type="text" id="datadenascimento" class="form-control " placeholder="Telefone celular">
-            </div>
-            <div class="col-md-3 pb-2"> Preferência de atendimento: <br>
-              <div class="form-check-inline">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
+              <div class="col-md-12">
+                <h4 class="tituloazul">Dados pessoais</h4>
+              </div>
+              <div class="col-md-6 pb-2"> Nome completo: <br>
+                <input type="text" id="nomecompleto" class="form-control " placeholder=" Nome completo">
+              </div>
+              <div class="form-group col-md-3 pb-2"> Sexo: <br>
+                <select class="form-control " id="sel1">
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                  <option>Não informar</option>
+                </select>
+              </div>
+              <div class="col-md-3"></div>
+              <div class="col-md-3 pb-2"> Data de nascimento: <br>
+                <input type="date" id="datadenascimento" class="form-control " placeholder="Data de nascimento">
+              </div>
+              <div class="col-md-3 pb-2"> Telefone fixo: <br>
+                <input type="text" id="datadenascimento" class="form-control " placeholder="Telefone fixo">
+              </div>
+              <div class="col-md-3 pb-2"> Telefone celular: <br>
+                <input type="text" id="datadenascimento" class="form-control " placeholder="Telefone celular">
+              </div>
+              <div class="col-md-3 pb-2"> Preferência de atendimento: <br>
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1"
                     checked>
-                <label class="form-check-label" for="exampleRadios1"> Tel fixo: </label>
-                <input class="form-check-input ml-4" type="radio" name="exampleRadios" id="exampleRadios1"
+                  <label class="form-check-label" for="exampleRadios1"> Tel fixo: </label>
+                  <input class="form-check-input ml-4" type="radio" name="exampleRadios" id="exampleRadios1"
                     value="opcao1" checked>
-                <label class="form-check-label" for="exampleRadios1"> Tel celular: </label>
+                  <label class="form-check-label" for="exampleRadios1"> Tel celular: </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <hr>
+              </div>
+              <div class="col-md-4 pb-2"> E-mail: <span style="font-size: 0.8rem; margin-top: 2rem;"> Seu login de
+                  acesso </span><br>
+                <input type="text" id="email" class="form-control " placeholder=" Pessoal ou institucional">
+              </div>
+              <div class="col-md-4 pb-2"> Senha: <br>
+                <input type="password" id="senha" class="form-control " placeholder="Ex: Sua senha"
+                  alt="Evite usar nome, data de nascimento, etc">
+              </div>
+              <div class="col-md-4 pb-2"> Confirmar senha: <br>
+                <input type="password" id="senha2" class="form-control " placeholder="Ex: Sua senha"
+                  alt="Evite usar nome, data de nascimento, etc">
+              </div>
+              <div class="col-md-4 pb-2"></div>
+              <div class="col-md-8 pb-2"><span style="font-size: 0.8rem; margin-top: 2rem;"> Escolha uma senha de fácil
+                  memorização, utilize pontos e números.</span> </div>
+              <div class="col-md-12">
+                <hr>
+              </div>
+              <div class="col-md-12">
+                <h4 class="tituloazul">Endereço</h4>
+              </div>
+              <div class="col-md-2 pb-2"> Cep: <br>
+                <input name="cep" type="text" id="cep" value="" class="form-control " placeholder="CEP" />
+              </div>
+              <div class="col-md-10"></div>
+              <div class="col-md-6 pb-2"> Endereço: <br>
+                <input type="text" id="rua" class="form-control " placeholder="Onde serão abertos os chamados">
+              </div>
+              <div class="col-md-2"> Nº <br>
+                <input type="number" id="numero" class="form-control " placeholder="Número">
+              </div>
+              <div class="col-md-4"> Complemento:
+                <input type="text" id="complemento" class="form-control " placeholder="Casa, apto, loja">
+              </div>
+              <div class="col-md-5"> Bairro: <br>
+                <input name="bairro" type="text" id="bairro" class="form-control " placeholder="Bairro" />
+              </div>
+              <div class="col-md-5"> Cidade: <br>
+                <input type="text" id="cidade" class="form-control " placeholder="Cidade">
+              </div>
+              <div class="col-md-1 "> UF: <br>
+                <input type="text" id="uf" class="form-control " placeholder="UF">
               </div>
             </div>
-            <div class="col-md-12">
-              <hr>
-            </div>
-            <div class="col-md-4 pb-2"> E-mail: <span style="font-size: 0.8rem; margin-top: 2rem;"> Seu login de acesso </span><br>
-              <input type="text" id="email" class="form-control " placeholder=" Pessoal ou institucional">
-            </div>
-            <div class="col-md-4 pb-2"> Senha: <br>
-              <input type="password" id="senha" class="form-control " placeholder="Ex: Sua senha"
-                  alt="Evite usar nome, data de nascimento, etc">
-            </div>
-            <div class="col-md-4 pb-2"> Confirmar senha: <br>
-              <input type="password" id="senha2" class="form-control " placeholder="Ex: Sua senha"
-                  alt="Evite usar nome, data de nascimento, etc">
-            </div>
-            <div class="col-md-4 pb-2"></div>
-            <div class="col-md-8 pb-2"><span style="font-size: 0.8rem; margin-top: 2rem;"> Escolha uma senha de fácil memorização, utilize pontos e números.</span> </div>
-            <div class="col-md-12">
-              <hr>
-            </div>
-            <div class="col-md-12">
-              <h4>Endereço</h4>
-            </div>
-            <div class="col-md-2 pb-2"> Cep: <br>
-              <input name="cep" type="text" id="cep" value="" class="form-control " placeholder="CEP" />
-            </div>
-            <div class="col-md-10"></div>
-            <div class="col-md-6 pb-2"> Endereço: <br>
-              <input type="text" id="rua" class="form-control " placeholder="Onde serão abertos os chamados">
-            </div>
-            <div class="col-md-2"> Nº <br>
-              <input type="number" id="numero" class="form-control " placeholder="Número">
-            </div>
-            <div class="col-md-4"> Complemento:
-              <input type="text" id="complemento" class="form-control " placeholder="Casa, apto, loja">
-            </div>
-            <div class="col-md-5"> Bairro: <br>
-              <input name="bairro" type="text" id="bairro" class="form-control " placeholder="Bairro" />
-            </div>
-            <div class="col-md-5"> Cidade: <br>
-              <input type="text" id="cidade" class="form-control " placeholder="Cidade">
-            </div>
-            <div class="col-md-1 "> UF: <br>
-              <input type="text" id="uf" class="form-control " placeholder="UF">
-            </div>
+            <!-- fim da row   -->
+            <div class="text-right pt-5"> <a class="btn btn-primary " id="pills-profile-tab" data-toggle="pill"
+                href="#pills-profile">Próximo</a> </div>
           </div>
-          <!-- fim da row   -->
-          <div class="text-right pt-5"> <a class="btn btn-primary " id="pills-profile-tab" data-toggle="pill" href="#pills-profile">Próximo</a> </div>
         </div>
+        <!-- fim da aba1 -->
       </div>
-      <!-- fim da aba1 --> 
-    </div>
-    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-      <div class="text-center" id="topoplanos">
-        <h3 style="color: #161c2e;">MEGA PLANOS</h3>
-        <p>Para cada necessidade temos uma solução de planos para você! </p>
-      </div>
-      <div class="col-md-12">
-        <div class="row">
-          <div class="col-md-4 planos mt-4">
-            <div class="cardplanos">
-              <div class="chamadaprecoplanos">
-                <div class="text-center">
-                  <h3 class="pt-3">AVULSO</h3>
-                  <P>Serviços a partir de:</P>
-                  <div class="preco"> <span style="margin-top: -40px;" class="pr-2">R$</span>
-                    <h2>29</h2>
-                    <span style="margin-bottom: -40px;">,90</span> </div>
-                </div>
-              </div>
-              <div class="p-3 le-1 listaservicos">
-                <ul>
-                  <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas </i>
-                  <li><i class="fal fa-check-circle"></i> Pague apenas pelo serviço contratado </li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos Agendados</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                 
-                  <span>Ideal para clientes que não possuem urgência e têm poucas demandas recorrentes no mês. </span>
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="text-center" id="topoplanos">
+          <h3 style="color: #161c2e;">MEGA PLANOS</h3>
 
+          <p>Para cada necessidade temos uma solução de planos para você! </p>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 planos mt-4 pb-5">
+              <div class="cardplanos">
+                <div class="chamadaprecoplanos">
+                  <div class="text-center">
+                    <h3 class="pt-3">Avulso</h3>
+                    <P>Serviços a partir de:</P>
+                    <div class="preco"> <span style="margin-top: -40px;" class="pr-2">R$</span>
+                      <h2>29</h2>
+                      <span style="margin-bottom: -40px;">,90</span>
+                    </div>
+                  </div>
                 </div>
-                <hr>
-               
-                <p class="text-center pt-3"> <a href="#mostra_aba1" onclick="mostrar_abas(this);" id="mostra_aba1"
+                <div class="p-3 le-1 listaservicos">
+                  <ul>
+                    <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas </i>
+                    <li><i class="fal fa-check-circle"></i> Pague apenas pelo serviço contratado </li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados</li>
+                  </ul>
+                  <hr>
+                  <div class="text-center">
+
+                    <span>Ideal para clientes que não possuem urgência e têm poucas demandas recorrentes no mês. </span>
+
+                  </div>
+                  <hr>
+
+                  <p class="text-center pt-3"> <a href="#mostra_aba1" onclick="mostrar_abas(this);" id="mostra_aba1"
                       alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> </p>
-                <div class="botoes"> <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4" class="btn btn-fale btn-sm pr-2 pl-2"><i
-                        class="far fa-check-circle" alt="Fale com um consultor" ></i> Assinar</a> </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="cardplanos">
-              <div class="chamadaprecoplanos">
-                <div class="text-center">
-                  <h3 class="pt-3">Gold</h3>
-                  <P>Por computador/mês:</P>
-                  <div class="preco"> <span style="margin-top: -40px;" class="pr-2">R$</span>
-                    <h2>79</h2>
-                    <span style="margin-bottom: -40px;">,00</span> </div>
-                </div>
-              </div>
-              <hr>
-              <div class="p-3 listaservicos"> 
-                <ul>
-                  <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas </i>
-                  <li><i class="fal fa-check-circle"></i> Serviços ilimitados</li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e Imediatos</li>
-                  <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
-                </ul>
+                  <div class="botoes">
 
-                <hr>
-                <div class="text-center">
-                <span>Economia e agilidade, para clientes que precisam de praticidade e atendimentos rápidos para o dia a dia.</span>
-              </div>
-                
-                
-                <hr>
-                <p class="text-center pt-3"> <a href="#mostra_aba2" onclick="mostrar_abas(this);" id="mostra_aba2"
-                      alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> | <a href="#chat"  id="mostra_aba6" class=""><i class="fas fa-user" alt="Fale com um consultor"></i> Fale com um consultor</a> </p>
-                <div class="botoes"> 
-                  <a href="#mostra_aba5" onclick="mostrar_abas(this);" id="mostra_aba5" class="btn btn-fale btn-sm" 
-                  style="padding-left: 40px; padding-right: 40px; text-align: center;">
-                      <i  class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar</a> </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mt-4 planos">
-            <div class="cardplanos">
-              <div class="chamadaprecoplanos">
-                <div class="text-center">
-                  <h3 class="pt-3">Premium</h3>
-                  
-                  <div class="preco">
-                    <p class="p-2" style="color: #fff; font-size: 1.3rem;">Solicite um orçamento com um <br> de nossos consultores!</p>
+
+                    <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4" class="btn btn-fale btn-sm"
+                      style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                      <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar</a>
                   </div>
                 </div>
               </div>
-              <div class="p-3 listaservicos">
-                <ul>
-                  <li><i class="fal fa-check-circle"></i> Para clientes corporativos </i>
-                  <li><i class="fal fa-check-circle"></i> Serviços ilimitados </li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
-                  <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e Imediatos</li>
-                  <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <span>Para clientes que necessitam de uma gestão e atendimentos especializados para o ambiente de
-                    infraestrutura de TI.</span>
+            </div>
+            <div class="col-md-4 pb-5 mb-5">
+              <div class="cardplanos">
+                <div class="chamadaprecoplanos2">
+                  <div class="text-center">
+                    <h3 class="pt-3">Gold</h3>
+                    <P>Por computador/mês:</P>
+                    <div class="preco"> <span style="margin-top: -50px;" class="pr-2">R$</span>
+                      <h2>79</h2>
+                      <span style="margin-bottom: -40px;">,00</span>
+                    </div>
+                    <p style="font-size: 0.9rem; margin-top: -10px;">Acima de 5 computadores, <br> temos preços
+                      especiais!</p>
+
+                  </div>
                 </div>
-                <hr>
-                
-                <p class="text-center pt-3"> <a href="#mostra_aba3" onclick="mostrar_abas(this);" id="mostra_aba3"
+
+                <div class="p-3 listaservicos">
+                  <ul style="margin-top:-30px;">
+                    <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas </i>
+                    <li><i class="fal fa-check-circle"></i> Serviços ilimitados</li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e Imediatos</li>
+                    <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
+                  </ul>
+
+                  <hr>
+                  <div class="text-center">
+                    <span>Economia e agilidade, para clientes que precisam de praticidade e atendimentos rápidos para o
+                      dia a dia.</span>
+                  </div>
+
+
+                  <hr>
+                  <p class="text-center pt-3"> <a href="#mostra_aba2" onclick="mostrar_abas(this);" id="mostra_aba2"
+                      alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> | <a href="#chat" id="mostra_aba6" class=""><i
+                        class="fas fa-user" alt="Fale com um consultor"></i> Fale com um consultor</a> </p>
+                  <div class="botoes">
+                    <a href="#mostra_aba5" onclick="mostrar_abas(this);" id="mostra_aba5" class="btn btn-fale btn-sm"
+                      style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                      <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar</a> </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mt-4 pb-5 planos">
+              <div class="cardplanos">
+                <div class="chamadaprecoplanos">
+                  <div class="text-center">
+                    <h3 class="pt-3">Premium</h3>
+
+                    <div class="preco">
+                      <p class="p-2" style="color: #fff; font-size: 1.3rem;">Solicite um orçamento com um <br> de nossos
+                        consultores!</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-3 listaservicos">
+                  <ul>
+                    <li><i class="fal fa-check-circle"></i> Para clientes corporativos </i>
+                    <li><i class="fal fa-check-circle"></i> Serviços ilimitados </li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e presenciais</li>
+                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e Imediatos</li>
+                    <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
+                  </ul>
+                  <hr>
+                  <div class="text-center">
+                    <span>Para clientes que necessitam de uma gestão e atendimentos especializados para o ambiente de
+                      infraestrutura de TI.</span>
+                  </div>
+                  <hr>
+
+                  <p class="text-center pt-3"> <a href="#mostra_aba3" onclick="mostrar_abas(this);" id="mostra_aba3"
                       alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> </p>
-                <div class="botoes"> <a href="#mostra_aba6" onclick="mostrar_abas(this);" id="mostra_aba6" class="btn btn-fale btn-sm"><i class="fas fa-user" alt="Fale com um consultor"></i> Fale com um consultor</a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <p></p>
-      <hr>
-      <!-- abas --> 
-      
-      <!-- DETALHES -->
-      
-      <div class="detalhesplano" id="div_aba1" style="display:none;">
-        <div class="text-center">
-          <h4>Plano avulso</h4>
-        </div>
-        <h5>Detalhes do plano</h5>
-        <ul>
-          <li>Detalhe1</li>
-          <li>Detalhe2</li>
-          <li>Detalhe3</li>
-          <li>Detalhe4</li>
-          <li>Detalhe5</li>
-        </ul>
-        <hr>
-        <div class="col-md-12">
-          <h5>Serviços disponíveis para contratação</h5>
-          <div class="row">
-            <div class="col-md-2 col-sm-6 ">
-              <div class="tituloaba azul">
-                <h5><i class="fas fa-ambulance fa-2x"></i> <br>
-                  Preciso de ajuda para contratar o serviço</h5>
-              </div>
-              <div class="textexpliactivo">Caso não saiba qual serviço contratar nós iremos te ajudar!</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde1">
-                <h5><i class="fas fa-exclamation-triangle fa-2x pb-2"></i> <br>
-                  Estou com algum problema técnico <br>
-                  . </h5>
-              </div>
-              <div class="textexpliactivo">Se alguma coisa não estiver funcionando bem, iremos identificar e
-                resolver o problema.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde2">
-                <h5><i class="fab fa-windows fa-2x pb-2"></i> <br>
-                  Suporte para programas e arquivos </h5>
-              </div>
-              <div class="textexpliactivo"> Iremos dar o suporte necessário para o correto funcionamento dos seus programas e arquivos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja">
-                <h5><i class="fas fa-cogs fa-2x pb-2"></i><br>
-                  Melhorias no ambiente de TI </h5>
-              </div>
-              <div class="textexpliactivo"> Melhorar o desempenho do seu computador ou realizar alguma instalação técnica.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja2">
-                <h5><i class="fas fa-desktop fa-2x pb-2"></i><br>
-                  Configuração e permissão de acessos </h5>
-              </div>
-              <div class="textexpliactivo"> Configuração de acessos a contas de e-mail, pastas, arquivos na nuvem entre outros.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba marrom">
-                <h5><i class="fas fa-chart-bar fa-2x pb-2"></i><br>
-                  Análise técnica e cotações de preços </h5>
-              </div>
-              <div class="textexpliactivo"> Analisar recursos técnicos e cotações de preços para compras de peças e equipamentos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-                <a href="#" class="btn btn-info">Contratar</a> </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="detalhesplano" id="div_aba2" style="display:none;">
-        <div class="text-center">
-          <h4>Plano Gold</h4>
-        </div>
-        <h5>Detalhes do plano</h5>
-        <ul>
-          <li>Detalhe1</li>
-          <li>Detalhe2</li>
-          <li>Detalhe3</li>
-          <li>Detalhe4</li>
-          <li>Detalhe5</li>
-        </ul>
-        <hr>
-        <div class="col-md-12">
-          <h5>Serviços disponíveis para contratação</h5>
-          <div class="row">
-            <div class="col-md-2 col-sm-6 ">
-              <div class="tituloaba azul">
-                <h5><i class="fas fa-ambulance fa-2x"></i> <br>
-                  Preciso de ajuda para contratar o serviço</h5>
-              </div>
-              <div class="textexpliactivo">Caso não saiba qual serviço contratar nós iremos te ajudar!</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde1">
-                <h5><i class="fas fa-exclamation-triangle fa-2x pb-2"></i> <br>
-                  Estou com algum problema técnico <br>
-                  . </h5>
-              </div>
-              <div class="textexpliactivo">Se alguma coisa não estiver funcionando bem, iremos identificar e
-                resolver o problema.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde2">
-                <h5><i class="fab fa-windows fa-2x pb-2"></i> <br>
-                  Suporte para programas e arquivos </h5>
-              </div>
-              <div class="textexpliactivo"> Iremos dar o suporte necessário para o correto funcionamento dos seus programas e arquivos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja">
-                <h5><i class="fas fa-cogs fa-2x pb-2"></i><br>
-                  Melhorias no ambiente de TI </h5>
-              </div>
-              <div class="textexpliactivo"> Melhorar o desempenho do seu computador ou realizar alguma instalação técnica.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja2">
-                <h5><i class="fas fa-desktop fa-2x pb-2"></i><br>
-                  Configuração e permissão de acessos </h5>
-              </div>
-              <div class="textexpliactivo"> Configuração de acessos a contas de e-mail, pastas, arquivos na nuvem entre outros.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba marrom">
-                <h5><i class="fas fa-chart-bar fa-2x pb-2"></i><br>
-                  Análise técnica e cotações de preços </h5>
-              </div>
-              <div class="textexpliactivo"> Analisar recursos técnicos e cotações de preços para compras de peças e equipamentos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="detalhesplano" id="div_aba3" style="display:none;">
-        <div class="text-center">
-          <h4>Plano Premium</h4>
-        </div>
-        <h5>Detalhes do plano</h5>
-        <ul>
-          <li>Detalhe1</li>
-          <li>Detalhe2</li>
-          <li>Detalhe3</li>
-          <li>Detalhe4</li>
-          <li>Detalhe5</li>
-        </ul>
-        <hr>
-        <div class="col-md-12">
-          <h5>Serviços disponíveis para contratação</h5>
-          <div class="row">
-            <div class="col-md-2 col-sm-6 ">
-              <div class="tituloaba azul">
-                <h5><i class="fas fa-ambulance fa-2x"></i> <br>
-                  Preciso de ajuda para contratar o serviço</h5>
-              </div>
-              <div class="textexpliactivo">Caso não saiba qual serviço contratar nós iremos te ajudar!</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde1">
-                <h5><i class="fas fa-exclamation-triangle fa-2x pb-2"></i> <br>
-                  Estou com algum problema técnico <br>
-                  . </h5>
-              </div>
-              <div class="textexpliactivo">Se alguma coisa não estiver funcionando bem, iremos identificar e
-                resolver o problema.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba verde2">
-                <h5><i class="fab fa-windows fa-2x pb-2"></i> <br>
-                  Suporte para programas e arquivos </h5>
-              </div>
-              <div class="textexpliactivo"> Iremos dar o suporte necessário para o correto funcionamento dos seus programas e arquivos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja">
-                <h5><i class="fas fa-cogs fa-2x pb-2"></i><br>
-                  Melhorias no ambiente de TI </h5>
-              </div>
-              <div class="textexpliactivo"> Melhorar o desempenho do seu computador ou realizar alguma instalação técnica.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba laranja2">
-                <h5><i class="fas fa-desktop fa-2x pb-2"></i><br>
-                  Configuração e permissão de acessos </h5>
-              </div>
-              <div class="textexpliactivo"> Configuração de acessos a contas de e-mail, pastas, arquivos na nuvem entre outros.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-            <div class="col-md-2 col-sm-6">
-              <div class="tituloaba marrom">
-                <h5><i class="fas fa-chart-bar fa-2x pb-2"></i><br>
-                  Análise técnica e cotações de preços </h5>
-              </div>
-              <div class="textexpliactivo"> Analisar recursos técnicos e cotações de preços para compras de peças e equipamentos.</div>
-              <div class="precodetalhes text-center"> A partir de:<br>
-                <h5>R$ 0,00</h5>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- modal -->
-      
-      <div class="modal fade" tabindex="-1" id="plano1" role="dialog" aria-labelledby="myLargeModalLabel"
-          aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content"> Modal1 </div>
-        </div>
-      </div>
-      <div class="modal fade" tabindex="-1" id="plano2" role="dialog" aria-labelledby="myLargeModalLabel"
-          aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="container text-center p-5">
-              <h4>Quantos computadores deseja assistência?</h4>
-              <br>
-              <div class="p-4 areaselect">
-                <div class="div-select">
-                  <select>
-                    <option>Selecione</option>
-                    <option>1 computador</option>
-                    <option>2 computadores</option>
-                    <option>3 computadores</option>
-                    <option>4 computadores</option>
-                    <option>5 computadores</option>
-                    <option>6 computadores</option>
-                    <option>7 computadores</option>
-                    <option>mais de 10</option>
-                  </select>
+                  <div class="botoes"> <a href="#mostra_aba6" onclick="mostrar_abas(this);" id="mostra_aba6"
+                      class="btn btn-fale btn-sm"><i class="fas fa-user" alt="Fale com um consultor"></i> Fale com um
+                      consultor</a> </div>
                 </div>
               </div>
             </div>
-            <div class="modal-footer"> <a class="btn btn-primary" id="pills-profile-tab" data-toggle="pill" data-dismiss="modal"
-                  href="#pills-contact">Salvar</a>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          </div>
+        </div>
+        <p></p>
+        <hr>
+        <!-- abas -->
+
+        <!-- DETALHES -->
+        <div class="detalhesplano" id="div_aba1" style="display:none;">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="text-center">
+                
+              </div>
+              <h5 class="tituloazul  pb-2 pt-3">Detalhes do plano avulso</h5>
+              <ul>
+                <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit.  </li>
+                <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+                <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+              </ul>
+              <div class="comofunciona">
+                <h5 class="tituloazul  pb-2 pt-3">Como funciona a contratação</h5>
+                <p class="text-center"><img src="images/sequenciaicones.png" class="img-fluid" alt=""></p>
+              </div>
+           
+              <div class="col-md-12">
+                <h5 class="tituloazul  pb-2 pt-3">Serviços disponíveis para contratação</h5>
+
+                <div class="row">
+
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/iconajuda.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/iconprob.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/iconwind.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/iconambTi.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/icontela.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-4 pb-4">
+                    <div class="card">
+                      <img class="card-img-top" src="images/iconanalise.jpg">
+                      <div class="card-body">                    
+                        <p class="card-text text-center">
+                          Caso não saiba qual serviço contratar nós iremos te ajudar!</p>
+                          <div class="col text-center"> 
+                            <span>à partir de:</span> <br>
+                            <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span> <br>  
+                          <a href="">Saiba mais </a>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center p-5">
+
+                  <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4" class="btn btn-fale btn-sm"
+                    style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                    <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar agora</a>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-md-4 lista ">
+              <div class="text-center">
+                <h5 class="tituloazul"> Grátis pacote de segurança *</h5>
+                <div style="margin-top: -10px;"> <span style="font-size: 0.8rem; margin-top: -10px;">  *Nos planos Gold e Premium</span> </div>
+               
+              </div>
+              <ul class="pt-3" style="font-size: 1rem;">
+                <li>
+                  <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </li>
+                <li>
+                  <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </li>
+                <li>
+                  <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </li>
+                <li>
+                  <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </li>
+                <li>
+                  <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
-      </div>
-      <div class="modal fade" tabindex="-1" id="plano3" role="dialog" aria-labelledby="myLargeModalLabel"
+
+        <div class="detalhesplano" id="div_aba2" style="display:none;">
+          <div class="text-center">
+            <h4>Plano Gold</h4>
+          </div>
+          <h5>Detalhes do plano</h5>
+          <ul>
+            <li> Detalhe1</li>
+            <li>Detalhe2</li>
+            <li>Detalhe3</li>
+            <li>Detalhe4</li>
+            <li>Detalhe5</li>
+          </ul>
+          <hr>
+          <h5 class="tituloazul">Serviços disponíveis para contratação</h5>
+            <div class="row">
+              <div class="col-md-2  ">
+                <div class="tituloaba azul">
+                  <i class="fas fa-ambulance fa-2x"></i>   
+                </div>
+              
+                <div class="textexpliactivo">Caso não saiba qual serviço contratar nós iremos te ajudar!</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 ">
+                <div class="tituloaba verde1">
+                  <h5><i class="fas fa-exclamation-triangle fa-2x pb-2"></i> <br>
+                    Estou com algum problema técnico <br>
+                    . </h5>
+                </div>
+                <div class="textexpliactivo">Se alguma coisa não estiver funcionando bem, iremos identificar e
+                  resolver o problema.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 ">
+                <div class="tituloaba verde2">
+                  <h5><i class="fab fa-windows fa-2x pb-2"></i> <br>
+                    Suporte para programas e arquivos </h5>
+                </div>
+                <div class="textexpliactivo"> Iremos dar o suporte necessário para o correto funcionamento dos seus
+                  programas e arquivos.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 ">
+                <div class="tituloaba laranja">
+                  <h5><i class="fas fa-cogs fa-2x pb-2"></i><br>
+                    Melhorias no ambiente de TI </h5>
+                </div>
+                <div class="textexpliactivo"> Melhorar o desempenho do seu computador ou realizar alguma instalação
+                  técnica.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 ">
+                <div class="tituloaba laranja2">
+                  <h5><i class="fas fa-desktop fa-2x pb-2"></i><br>
+                    Configuração e permissão de acessos </h5>
+                </div>
+                <div class="textexpliactivo"> Configuração de acessos a contas de e-mail, pastas, arquivos na nuvem
+                  entre outros.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 ">
+                <div class="tituloaba marrom">
+                  <h5><i class="fas fa-chart-bar fa-2x pb-2"></i><br>
+                    Análise técnica e cotações de preços </h5>
+                </div>
+                <div class="textexpliactivo"> Analisar recursos técnicos e cotações de preços para compras de peças e
+                  equipamentos.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="detalhesplano" id="div_aba3" style="display:none;">
+          <div class="text-center">
+            <h4>Plano Premium</h4>
+          </div>
+          <h5>Detalhes do plano</h5>
+          <ul>
+            <li>Detalhe1</li>
+            <li>Detalhe2</li>
+            <li>Detalhe3</li>
+            <li>Detalhe4</li>
+            <li>Detalhe5</li>
+          </ul>
+          <hr>
+          <div class="col-md-12">
+            <h5>Serviços disponíveis para contratação</h5>
+            <div class="row">
+              <div class="col-md-2 col-sm-6 ">
+                <div class="tituloaba azul">
+                  <h5><i class="fas fa-ambulance fa-2x"></i> <br>
+                    Preciso de ajuda para contratar o serviço</h5>
+                </div>
+                <div class="textexpliactivo">Caso não saiba qual serviço contratar nós iremos te ajudar!</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-6">
+                <div class="tituloaba verde1">
+                  <h5><i class="fas fa-exclamation-triangle fa-2x pb-2"></i> <br>
+                    Estou com algum problema técnico <br>
+                    . </h5>
+                </div>
+                <div class="textexpliactivo">Se alguma coisa não estiver funcionando bem, iremos identificar e
+                  resolver o problema.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-6">
+                <div class="tituloaba verde2">
+                  <h5><i class="fab fa-windows fa-2x pb-2"></i> <br>
+                    Suporte para programas e arquivos </h5>
+                </div>
+                <div class="textexpliactivo"> Iremos dar o suporte necessário para o correto funcionamento dos seus
+                  programas e arquivos.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-6">
+                <div class="tituloaba laranja">
+                  <h5><i class="fas fa-cogs fa-2x pb-2"></i><br>
+                    Melhorias no ambiente de TI </h5>
+                </div>
+                <div class="textexpliactivo"> Melhorar o desempenho do seu computador ou realizar alguma instalação
+                  técnica.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-6">
+                <div class="tituloaba laranja2">
+                  <h5><i class="fas fa-desktop fa-2x pb-2"></i><br>
+                    Configuração e permissão de acessos </h5>
+                </div>
+                <div class="textexpliactivo"> Configuração de acessos a contas de e-mail, pastas, arquivos na nuvem
+                  entre outros.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+              <div class="col-md-2 col-sm-6">
+                <div class="tituloaba marrom">
+                  <h5><i class="fas fa-chart-bar fa-2x pb-2"></i><br>
+                    Análise técnica e cotações de preços </h5>
+                </div>
+                <div class="textexpliactivo"> Analisar recursos técnicos e cotações de preços para compras de peças e
+                  equipamentos.</div>
+                <div class="precodetalhes text-center"> A partir de:<br>
+                  <h5>R$ 0,00</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal -->
+
+        <div class="modal fade" tabindex="-1" id="plano1" role="dialog" aria-labelledby="myLargeModalLabel"
           aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content"> Modal3 </div>
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content"> Modal1 </div>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" id="plano2" role="dialog" aria-labelledby="myLargeModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="container text-center p-5">
+                <h4>Quantos computadores deseja assistência?</h4>
+                <br>
+                <div class="p-4 areaselect">
+                  <div class="div-select">
+                    <select>
+                      <option>Selecione</option>
+                      <option>1 computador</option>
+                      <option>2 computadores</option>
+                      <option>3 computadores</option>
+                      <option>4 computadores</option>
+                      <option>5 computadores</option>
+                      <option>6 computadores</option>
+                      <option>7 computadores</option>
+                      <option>mais de 10</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer"> <a class="btn btn-primary" id="pills-profile-tab" data-toggle="pill"
+                  data-dismiss="modal" href="#pills-contact">Salvar</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" tabindex="-1" id="plano3" role="dialog" aria-labelledby="myLargeModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content"> Modal3 </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-      <div class="col-md-12"></div>
-      <div class="form-group">
-        <h4>Pagamento</h4>
-        <br>
-        <div class="detalhesplano" id="div_aba4" style="display:none;"> comprar plano 1 </div>
-        <div class="detalhesplano" id="div_aba5" style="display:none;"> comprar plano 2 </div>
-        <div class="detalhesplano" id="div_aba6" style="display:none;"> comprar plano 3</div>
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="col-md-12"></div>
+        <div class="form-group">
+          <h4>Pagamento</h4>
+          <br>
+          <div class="detalhesplano" id="div_aba4" style="display:none;"> comprar plano 1 </div>
+          <div class="detalhesplano" id="div_aba5" style="display:none;"> comprar plano 2 </div>
+          <div class="detalhesplano" id="div_aba6" style="display:none;"> comprar plano 3</div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
-  <script src="js/jquery-3.3.1.min.js"></script>--> 
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+  <script src="js/jquery-3.3.1.min.js"></script>-->
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
 
-    </script> 
-<script src="fontawesome-pro/js/all.js"></script> 
+    </script>
+  <script src="fontawesome-pro/js/all.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.3.1.js"></script> 
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap-4.3.1.js"></script>
 
-<!-- Adicionando Javascript --> 
-<script type="text/javascript">
+  <!-- Adicionando Javascript -->
+  <script type="text/javascript">
 
     $(document).ready(function () {
 
@@ -760,4 +866,5 @@
     }
   </script>
 </body>
+
 </html>

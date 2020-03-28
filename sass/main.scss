@@ -242,29 +242,18 @@ body {
 
 // includes
 @mixin divtitulo{
-  padding: 5px;
-  list-style: none;
-  border-radius: 10px 10px 0px 0px;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 16px 32px;
+    list-style: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
 
-}
+}                                                                                                                                                          
 
-// includes
-@mixin divtitulo{
-  padding: 5px;
-  list-style: none;
-  border-radius: 10px;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
-
-.azul {
+.azul {    
   background: #1373bf;
   color: #fff;
   @include divtitulo();
@@ -300,7 +289,7 @@ body {
   text-align: center;
   font-size: 0.7rem;
   h5{
-    font-size: 1rem !important;
+    font-size: 0.9rem !important;
   }
 }
 .abasuporte{
@@ -324,7 +313,7 @@ body {
 }
 ul > li {
   list-style: none;
-  font-size: 1.2rem;
+ 
 }
 
 .nav-link {
@@ -338,7 +327,7 @@ ul > li {
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.19);
-    min-height: 445px;
+    min-height: 545px;
     z-index: 87;
     color: #1481f2;
 
@@ -348,9 +337,10 @@ ul > li {
 
 
 .chamadaprecoplanos{
-  background: url('../images/bg-top-planos.png') no-repeat bottom;
-  background-size: contain;
-  height: 207px;
+  background: url('../images/bg-top-planos.png') no-repeat ;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  height: 203px;
   color: #fff;
   h3 {
     font-family: 'Montserrat', sans-serif;
@@ -358,9 +348,75 @@ ul > li {
   }
 }
 
-@media (max-width: 576px) { 
+.chamadaprecoplanos2{
+  background: url('../images/bg-top-planos2.png') no-repeat ;
+  background-position: top;
+  background-size: cover;
+  border-radius: 10px 10px 0px 0px;
+  height: 300px;
+  color: #fff;
+  h3 {
+    font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+  }
+}
+
+
+@media (max-width: 376px) { 
   .chamadaprecoplanos{
-    height: 222px;
+    height: 196px;
+    padding-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 360px) { 
+  .chamadaprecoplanos{
+    height: 184px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 20px;
+  }
+  
+  .chamadaprecoplanos2{
+    height: 272px;
+    padding-bottom: 20px;
+  }
+  
+}
+
+
+@media (min-width:361px) and (max-width: 413px) { 
+  .chamadaprecoplanos{
+    height: 193px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 20px;
+  }
+  .chamadaprecoplanos2{
+    height: 279px !important;
+    padding-bottom: 20px;
+  }
+ 
+  
+}
+@media (min-width:414px) and (max-width: 768px) { 
+  .chamadaprecoplanos{
+    height: 219px;
+    padding-bottom: 20px;
+  }
+  .chamadaprecoplanos2{
+    height: 319px;
+    padding-bottom: 20px;
+    
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .comofunciona {
+    display: none;
+
   }
 }
 
@@ -391,14 +447,39 @@ ul > li {
   color: #1481f2;
   ul {
     margin-left: -30px;
-    line-height: 1.8rem;
+    line-height: 1.7rem;
   }
   li {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #1481f2;
   }
   p span {
     font-size: 0.9rem;
     color: #1481f2;
   }
+}
+.itemplano {
+
+    border-radius: 5px;
+    padding: 1rem;
+    min-height: 200px;
+    background: #efeded;
+    border: #ccc;
+    margin-bottom: 25px;
+    box-shadow: 0px 7px 13px 0px rgba(0, 0, 0, 0.13);
+    display: flex;
+  align-items: center;
+  justify-content: center;
+   
+}
+
+
+.botaoassinar{
+  position: absolute;
+  right: 10px;
+}
+
+.tituloazul {
+  color: #1481f2 !important;
+
 }
