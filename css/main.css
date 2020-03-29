@@ -4099,4 +4099,66 @@ ul > li {
 .tituloazul {
   color: #1481f2 !important; }
 
+/*formulario pagina 2 */
+.titnavs {
+  border-radius: 10rem;
+  background: #efeded;
+  padding: 20px;
+  width: 68px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.2rem; }
+
+.titnavsSel {
+  color: #fff !important;
+  background-color: #007bff !important; }
+
+@media (max-width: 460px) {
+  .titnavs {
+    border-radius: 10rem;
+    padding: 10px;
+    width: 43px;
+    font-size: 1rem; } }
+#formulario #progress li {
+  list-style: none;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 10px;
+  float: left;
+  width: 33.33%;
+  position: relative; }
+
+#formulario #progress li:before {
+  content: counter(step);
+  width: 20px;
+  display: block;
+  line-height: 20px;
+  background: #efeded;
+  columns: #333;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 0 auto 10px auto; }
+
+#formulario #progress li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 9px;
+  left: -50px;
+  z-index: -1; }
+
+#formulario #progress li:first-child:after {
+  content: none; }
+
+#formulario #progress li.ativo:before, #formulario #profess li.ativo:after {
+  background: #ccc;
+  color: #fff; }
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro de novos usuários</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="fontawesome-pro/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+
+<body>
+
+    <form #f="ngForm" id="formulario" autocomplete="off" (ngSubmit)="onSubmit(f)">
+
+        <div class="container">
+            <fieldset>
+                <div class="paginacao1">
+                    <div class="navpaginacao">
+                        <div class="d-flex justify-content-center bd-highlight mb-3">
+                            <div class="bd-highlight" style="padding-right: 6rem;">
+        
+
+                                <div class="titnavsSel titnavs  ml-3 ">1</div>
+                                <div class="titulonav">Dados pessoais</div>
+                            </div>
+
+                            <div class="bd-highlight" style="padding-right: 8rem;">
+                                <div class="titnavs">2</div>
+                                <div class="ml-2 titulonav">Planos</div>
+                            </div>
+
+                            <div class="pr-2 bd-highlight" style="
+        padding-right: 5rem;
+    ">
+                                <div class="ml-1 titnavs">3</div>
+                                <div class="titulonav">Pagamento</div>
+                            </div>
+                        </div>
+
+<!-- 
+                        <ul id="progress">
+                            <li class="ativo">Dados pessoais</li>
+                            <li>Planos</li>
+                            <li>Pagamentos</li>
+                        </ul> -->
+                    </div>
+
+                    <div class="container borderazul">
+
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <div class="aba1 cadastro">
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group pb-2">
+                                            <h4 class="tituloazul">Tipo do cadastro? </h4>
+                                            <div class="form-check-inline">
+                                                <input class="form-check-input" type="radio" name="tipocontrato"
+                                                    id="tipocontrato1" value="igotnone" onclick="show1();" checked>
+                                                <label class="form-check-label" for="exampleRadios1"> Pessoa física:
+                                                </label>
+                                                <input class="form-check-input ml-4" type="radio" name="tipocontrato"
+                                                    id="tipocontrato" onclick="show2();">
+                                                <label class="form-check-label" for="exampleRadios1"> Pessoa jurídica:
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="divjuridico" style="display:none" class="col-md-12">
+                                            <h4 class="tituloazul">Dados da empresa</h4>
+                                            <div class="row pb-2 pb-2">
+                                                <div class="col-md-6"> Nome fantasia: <br>
+                                                    <input type="text" id="nomefantasia" class="form-control "
+                                                        placeholder="Nome fantasia">
+                                                </div>
+                                                <div class="col-md-3 pb-2 "> CNPJ: <br>
+                                                    <input type="number" class="form-control " id="cnpj"
+                                                        class="form-control " placeholder="CNPJ">
+                                                </div>
+                                                <div class="col-md-3 pb-2"> Inscrição Estadual: <br>
+                                                    <div class="form-check-inline">
+                                                        <input type="text" id="inscricaoestadual" class="form-control "
+                                                            placeholder="Inscrição Estadual">
+                                                        <input type="checkbox" name="Isento" id="isento" class="m-2"
+                                                            onclick="desabilita('isento')">
+                                                        Isento </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 pb-2">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h4 class="tituloazul">Dados pessoais</h4>
+                                        </div>
+                                        <div class="col-md-6 pb-2"> Nome completo: <br>
+                                            <input type="text" id="nomecompleto" class="form-control " 
+                                                placeholder=" Nome completo">
+                                        </div>
+                                        <div class="form-group col-md-3 pb-2"> Sexo: <br>
+                                            <select class="form-control " id="sel1">
+                                                <option>Masculino</option>
+                                                <option>Feminino</option>
+                                                <option>Não informar</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3"></div>
+                                        <div class="col-md-3 pb-2"> Data de nascimento: <br>
+                                            <input type="date" id="datadenascimento" class="form-control " 
+                                                placeholder="Data de nascimento">
+                                        </div>
+                                        <div class="col-md-3 pb-2"> Telefone fixo: <br>
+                                            <input type="text" id="datadenascimento" class="form-control "
+                                                placeholder="Telefone fixo">
+                                        </div>
+                                        <div class="col-md-3 pb-2"> Telefone celular: <br>
+                                            <input type="text" id="datadenascimento" class="form-control " 
+                                                placeholder="Telefone celular">
+                                        </div>
+                                        <div class="col-md-3 pb-2"> Preferência de atendimento: <br>
+                                            <div class="form-check-inline">
+                                                <input class="form-check-input" type="radio" name="exampleRadios"
+                                                    id="exampleRadios1" value="opcao1" checked>
+                                                <label class="form-check-label" for="exampleRadios1"> Tel fixo: </label>
+                                                <input class="form-check-input ml-4" type="radio" name="exampleRadios"
+                                                    id="exampleRadios1" value="opcao1" checked>
+                                                <label class="form-check-label" for="exampleRadios1"> Tel celular: </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-4 pb-2"> E-mail: <span
+                                                style="font-size: 0.8rem; margin-top: 2rem;"> Seu login de
+                                                acesso </span><br>
+                                            <input type="text" id="email" class="form-control " 
+                                                placeholder=" Pessoal ou institucional">
+                                        </div>
+                                        <div class="col-md-4 pb-2"> Senha: <br>
+                                            <input type="password" id="senha" class="form-control " 
+                                                placeholder="Ex: Sua senha" alt="Evite usar nome, data de nascimento, etc">
+                                        </div>
+                                        <div class="col-md-4 pb-2"> Confirmar senha: <br>
+                                            <input type="password" id="senha2" class="form-control " 
+                                                placeholder="Ex: Sua senha" alt="Evite usar nome, data de nascimento, etc">
+                                        </div>
+                                        <div class="col-md-4 pb-2"></div>
+                                        <div class="col-md-8 pb-2"><span style="font-size: 0.8rem; margin-top: 2rem;">
+                                                Escolha uma senha de fácil
+                                                memorização, utilize pontos e números.</span> </div>
+                                        <div class="col-md-12">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <h4 class="tituloazul">Endereço</h4>
+                                        </div>
+                                        <div class="col-md-2 pb-2"> Cep: <br>
+                                            <input name="cep" type="text" id="cep" value="" class="form-control " 
+                                                placeholder="CEP" />
+                                        </div>
+                                        <div class="col-md-10"></div>
+                                        <div class="col-md-6 pb-2"> Endereço: <br>
+                                            <input type="text" id="rua" class="form-control "
+                                                placeholder="Onde serão abertos os chamados">
+                                        </div>
+                                        <div class="col-md-2"> Nº <br>
+                                            <input type="number" id="numero" class="form-control " placeholder="Número">
+                                        </div>
+                                        <div class="col-md-4"> Complemento:
+                                            <input type="text" id="complemento" class="form-control "
+                                                placeholder="Casa, apto, loja">
+                                        </div>
+                                        <div class="col-md-5"> Bairro: <br>
+                                            <input name="bairro" type="text" id="bairro" class="form-control "
+                                                placeholder="Bairro" />
+                                        </div>
+                                        <div class="col-md-5"> Cidade: <br>
+                                            <input type="text" id="cidade" class="form-control " placeholder="Cidade">
+                                        </div>
+                                        <div class="col-md-1 "> UF: <br>
+                                            <input type="text" id="uf" class="form-control " placeholder="UF">
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <hr>
+                                            <input type="checkbox" aria-label="Checkbox for following text input"> Li e
+                                            concordo com os termos deste contrato
+                                        </div>
+                                    </div>
+                                    <!-- fim da row   -->
+                                    <div class="text-right pt-5"> 
+                                        <button class="btn btn-primary" name="next" value="proximo">Próximo</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- fim da aba1 -->
+                        </div>
+
+                    </div>
+                </div> <!-- fim da paginacao 1-->
+            </fieldset>
+
+            <fieldset>
+                <div class="paginacao2" id="paginacao2">
+                    <div class="navpaginacao">
+                        <div class="d-flex justify-content-center bd-highlight mb-3">
+                            <div class="bd-highlight" style="padding-right: 6rem;">
+        
+
+                                <div class=" titnavs  ml-3 ">1</div>
+                                <div class="titulonav">Dados pessoais</div>
+                            </div>
+
+                            <div class="bd-highlight" style="padding-right: 8rem;">
+                                <div class=" titnavsSel titnavs">2</div>
+                                <div class="ml-2 titulonav">Planos</div>
+                            </div>
+
+                            <div class="pr-2 bd-highlight" style="
+        padding-right: 5rem;
+    ">
+                                <div class="ml-1 titnavs">3</div>
+                                <div class="titulonav">Pagamento</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container borderazul">
+
+
+
+
+                        <div>
+                            <div class="text-center" id="topoplanos">
+                                <h3 style="color: #161c2e;">MEGA PLANOS</h3>
+
+                                <p>Para cada necessidade temos uma solução de planos para você! </p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4 planos mt-4 pb-5">
+                                        <div class="cardplanos">
+                                            <div class="chamadaprecoplanos">
+                                                <div class="text-center">
+                                                    <h3 class="pt-3">Avulso</h3>
+                                                    <P>Serviços a partir de:</P>
+                                                    <div class="preco"> <span style="margin-top: -40px;"
+                                                            class="pr-2">R$</span>
+                                                        <h2>29</h2>
+                                                        <span style="margin-bottom: -40px;">,90</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 le-1 listaservicos">
+                                                <ul>
+                                                    <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas
+                                                        </i>
+                                                    <li><i class="fal fa-check-circle"></i> Pague apenas pelo serviço
+                                                        contratado </li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e
+                                                        presenciais</li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados</li>
+                                                </ul>
+                                                <hr>
+                                                <div class="text-center">
+
+                                                    <span>Ideal para clientes que não possuem urgência e têm poucas demandas
+                                                        recorrentes no mês. </span>
+
+                                                </div>
+                                                <hr>
+
+                                                <p class="text-center pt-3"> <a href="#mostra_aba1"
+                                                        onclick="mostrar_abas(this);" id="mostra_aba1"
+                                                        alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> </p>
+                                                <div class="botoes">
+
+
+                                                    <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4"
+                                                        class="btn btn-fale btn-sm"
+                                                        style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                                                        <i class="far fa-check-circle " alt="Fale com um consultor"></i>
+                                                        Assinar</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 pb-5 mb-5">
+                                        <div class="cardplanos">
+                                            <div class="chamadaprecoplanos2">
+                                                <div class="text-center">
+                                                    <h3 class="pt-3">Gold</h3>
+                                                    <P>Por computador/mês:</P>
+                                                    <div class="preco"> <span style="margin-top: -50px;"
+                                                            class="pr-2">R$</span>
+                                                        <h2>79</h2>
+                                                        <span style="margin-bottom: -40px;">,00</span>
+                                                    </div>
+                                                    <p style="font-size: 0.9rem; margin-top: -10px;">Acima de 5
+                                                        computadores, <br> temos preços
+                                                        especiais!</p>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="p-3 listaservicos">
+                                                <ul style="margin-top:-30px;">
+                                                    <li><i class="fal fa-check-circle"></i> Para empresas e pessoas físicas
+                                                        </i>
+                                                    <li><i class="fal fa-check-circle"></i> Serviços ilimitados</li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e
+                                                        presenciais</li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e
+                                                        Imediatos</li>
+                                                    <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
+                                                </ul>
+
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>Economia e agilidade, para clientes que precisam de praticidade e
+                                                        atendimentos rápidos para o
+                                                        dia a dia.</span>
+                                                </div>
+
+
+                                                <hr>
+                                                <p class="text-center pt-3"> <a href="#mostra_aba2"
+                                                        onclick="mostrar_abas(this);" id="mostra_aba2"
+                                                        alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> | <a href="#chat"
+                                                        id="mostra_aba6" class=""><i class="fas fa-user"
+                                                            alt="Fale com um consultor"></i> Fale com um consultor</a> </p>
+                                                <div class="botoes">
+                                                    <a href="#mostra_aba5" onclick="mostrar_abas(this);" id="mostra_aba5"
+                                                        class="btn btn-fale btn-sm"
+                                                        style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                                                        <i class="far fa-check-circle " alt="Fale com um consultor"></i>
+                                                        Assinar</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mt-4 pb-5 planos">
+                                        <div class="cardplanos">
+                                            <div class="chamadaprecoplanos">
+                                                <div class="text-center">
+                                                    <h3 class="pt-3">Premium</h3>
+
+                                                    <div class="preco">
+                                                        <p class="p-2" style="color: #fff; font-size: 1.3rem;">Solicite um
+                                                            orçamento com um <br> de nossos
+                                                            consultores!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-3 listaservicos">
+                                                <ul>
+                                                    <li><i class="fal fa-check-circle"></i> Para clientes corporativos </i>
+                                                    <li><i class="fal fa-check-circle"></i> Serviços ilimitados </li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos remotos e
+                                                        presenciais</li>
+                                                    <li><i class="fal fa-check-circle"></i> Atendimentos Agendados e
+                                                        Imediatos</li>
+                                                    <li><i class="fal fa-check-circle"></i> Grátis pacote de segurança</li>
+                                                </ul>
+                                                <hr>
+                                                <div class="text-center">
+                                                    <span>Para clientes que necessitam de uma gestão e atendimentos
+                                                        especializados para o ambiente de
+                                                        infraestrutura de TI.</span>
+                                                </div>
+                                                <hr>
+
+                                                <p class="text-center pt-3"> <a href="#mostra_aba3"
+                                                        onclick="mostrar_abas(this);" id="mostra_aba3"
+                                                        alt="Ainda tem dúvida? Clique aqui">Saiba mais</a> </p>
+                                                <div class="botoes"> <a href="#mostra_aba6" onclick="mostrar_abas(this);"
+                                                        id="mostra_aba6" class="btn btn-fale btn-sm"><i class="fas fa-user"
+                                                            alt="Fale com um consultor"></i> Fale com um
+                                                        consultor</a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+                            <hr>
+                            <!-- abas -->
+
+                            <!-- DETALHES avulso -->
+                            <div class="detalhesplano" id="div_aba1" style="display:none;">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+
+                                        </div>
+                                        <h5 class="tituloazul  pb-2 pt-3">Detalhes do plano avulso</h5>
+                                        <ul>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                        </ul>
+                                        <div class="comofunciona">
+                                            <h5 class="tituloazul  pb-2 pt-3">Como funciona a contratação</h5>
+                                            <p class="text-center"><img src="images/sequenciaicones.png" class="img-fluid"
+                                                    alt=""></p>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <h5 class="tituloazul  pb-2 pt-3">Serviços disponíveis para contratação</h5>
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconajuda.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconprob.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconwind.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconambTi.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/icontela.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconanalise.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center p-5">
+
+                                                <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4"
+                                                    class="btn btn-fale btn-sm"
+                                                    style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                                                    <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar
+                                                    agora</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 lista ">
+                                        <div class="text-center">
+                                            <h5 class="tituloazul"> Grátis pacote de segurança *</h5>
+                                            <div style="margin-top: -10px;"> <span
+                                                    style="font-size: 0.8rem; margin-top: -10px;"> *Nos planos Gold e
+                                                    Premium</span> </div>
+
+                                        </div>
+                                        <ul class="pt-3" style="font-size: 1rem;">
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                         
+                            <!-- DETALHES gold-->
+                            <div class="detalhesplano" id="div_aba2" style="display:none;">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+
+                                        </div>
+                                        <h5 class="tituloazul  pb-2 pt-3">Detalhes do plano avulso</h5>
+                                        <ul>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                        </ul>
+                                        <div class="comofunciona">
+                                            <h5 class="tituloazul  pb-2 pt-3">Como funciona a contratação</h5>
+                                            <p class="text-center"><img src="images/sequenciaicones.png" class="img-fluid"
+                                                    alt=""></p>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <h5 class="tituloazul  pb-2 pt-3">Serviços disponíveis para contratação</h5>
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconajuda.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconprob.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconwind.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconambTi.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/icontela.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconanalise.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center p-5">
+
+                                                <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4"
+                                                    class="btn btn-fale btn-sm"
+                                                    style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                                                    <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar
+                                                    agora</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 lista ">
+                                        <div class="text-center">
+                                            <h5 class="tituloazul"> Grátis pacote de segurança *</h5>
+                                            <div style="margin-top: -10px;"> <span
+                                                    style="font-size: 0.8rem; margin-top: -10px;"> *Nos planos Gold e
+                                                    Premium</span> </div>
+
+                                        </div>
+                                        <ul class="pt-3" style="font-size: 1rem;">
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- DETALHES premium-->
+                            <div class="detalhesplano" id="div_aba3" style="display:none;">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="text-center">
+
+                                        </div>
+                                        <h5 class="tituloazul  pb-2 pt-3">Detalhes do plano avulso</h5>
+                                        <ul>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                            <li><i class="far fa-check-circle " alt="Fale com um consultor"></i> Lorem ipsum
+                                                dolor sit amet consectetur adipisicing elit. </li>
+                                        </ul>
+                                        <div class="comofunciona">
+                                            <h5 class="tituloazul  pb-2 pt-3">Como funciona a contratação</h5>
+                                            <p class="text-center"><img src="images/sequenciaicones.png" class="img-fluid"
+                                                    alt=""></p>
+                                        </div>
+
+                                        <div class="col-md-12">
+                                            <h5 class="tituloazul  pb-2 pt-3">Serviços disponíveis para contratação</h5>
+
+                                            <div class="row">
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconajuda.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconprob.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconwind.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconambTi.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/icontela.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-md-4 pb-4">
+                                                    <div class="card">
+                                                        <img class="card-img-top" src="images/iconanalise.jpg">
+                                                        <div class="card-body">
+                                                            <p class="card-text text-center">
+                                                                Caso não saiba qual serviço contratar nós iremos te ajudar!
+                                                            </p>
+                                                            <div class="col text-center">
+                                                                <span>à partir de:</span> <br>
+                                                                <span style="font-size: 1rem;"></span>R$ <b>29,90</b></span>
+                                                                <br>
+                                                                <a href="">Saiba mais </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-center p-5">
+
+                                                <a href="#mostra_aba4" onclick="mostrar_abas(this);" id="mostra_aba4"
+                                                    class="btn btn-fale btn-sm"
+                                                    style="padding-left: 40px; padding-right: 40px; text-align: center;">
+                                                    <i class="far fa-check-circle " alt="Fale com um consultor"></i> Assinar
+                                                    agora</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 lista ">
+                                        <div class="text-center">
+                                            <h5 class="tituloazul"> Grátis pacote de segurança *</h5>
+                                            <div style="margin-top: -10px;"> <span
+                                                    style="font-size: 0.8rem; margin-top: -10px;"> *Nos planos Gold e
+                                                    Premium</span> </div>
+
+                                        </div>
+                                        <ul class="pt-3" style="font-size: 1rem;">
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                            <li>
+                                                <i class="fal fa-shield-check"></i> <b>Ferramentas de Antivirus</b>
+                                                <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>                        
+
+                        </div>
+
+
+                        <div class="d-flex justify-content-center bd-highlight mb-3">
+                            <div class="text-right p-2"> <a class="btn btn-primary " id="pills-profile-tab"
+                                    data-toggle="pill"  href="#pills-profile">Voltar</a></div>
+                            <div class="text-right p-2"> <a class="btn btn-primary " id="pills-profile-tab"
+                                    data-toggle="pill" href="#pills-profile">Próximo</a></div>
+                        </div>
+                    </div>
+
+                </div> <!-- fim da paginacao 2-->
+            </fieldset>
+
+            <fieldset>
+                <div class="paginacao3">
+                    <div class="navpaginacao">
+                        <div class="navpaginacao">
+                            <div class="d-flex justify-content-center bd-highlight mb-3">
+                                <div class="bd-highlight" style="padding-right: 6rem;">
+            
+    
+                                    <div class=" titnavs  ml-3 ">1</div>
+                                    <div class="titulonav">Dados pessoais</div>
+                                </div>
+    
+                                <div class="bd-highlight" style="padding-right: 8rem;">
+                                    <div class="titnavs">2</div>
+                                    <div class="ml-2 titulonav">Planos</div>
+                                </div>
+    
+                                <div class="pr-2 bd-highlight" style="
+            padding-right: 5rem;
+        ">
+                                    <div class="titnavsSel ml-1 titnavs">3</div>
+                                    <div class="titulonav">Pagamento</div>
+                                </div>
+                            </div>
+    
+    <!-- 
+                            <ul id="progress">
+                                <li class="ativo">Dados pessoais</li>
+                                <li>Planos</li>
+                                <li>Pagamentos</li>
+                            </ul> -->
+                        </div>
+                    </div>
+
+                    <div class="container borderazul">
+                        <div>
+                            <div class="text-center" id="topoplanos">
+                                <h3 style="color: #161c2e;">PAGAMENTO</h3>
+
+                                <p>Tela de pagamento </p>
+                            </div>
+
+
+                            <div class="avulsofinal"><!-- APARECE DE ACORDO COM O PLANO SELECIONADO-->
+                               <h5>Parabéns, </h5> 
+                              <p> O seu cadastro foi concluído com sucesso!
+                                Clique abaixo para realizar o seu acesso.</p>
+                                <div class="text-center">
+                                     <a class="btn btn-primary " id="acessar"
+                                        href="#">Entrar</a>
+                                </div>
+                            </div>
+
+                            <div class="planogoldfinal"> <!-- APARECE DE ACORDO COM O PLANO SELECIONADO-->
+                               <h5> Plano selecionado <b>Gold <!-- GOLD OU PREMIUM--> </b></h5>
+                                <p>Informe a quantidade de computadores que deseja contratar o suporte: 
+                                <label for=""> <input type="text" name="numerocomputadores" class="form-control" id="" maxlength="4" size="4"></label>
+                                   </p>
+                                <p><i class="fal fa-shopping-cart"></i> Valor original: R$ 500,00 </p>
+                                <p><i class="fal fa-cart-arrow-down"></i> Desconto aplicado: R$ 100 (20%)</p>
+                                <p><i class="fal fa-money-bill-wave"></i> valor final da fatura mensal: <span style="font-size: 1.5rem;"> R$ 400,00</span></p>
+                                <P> PAGAMENTO VINDI</P>
+                            </div>
+
+                        </div>
+
+
+                        
+                    </div>
+
+                </div> <!-- fim da paginacao 2-->
+            </fieldset>
+
+        </div>
+        <!-- fim do container -->
+
+    </form>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+  <script src="js/jquery-3.3.1.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+
+        </script>
+    <script src="fontawesome-pro/js/all.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+  <script src="js/jquery-3.3.1.min.js"></script>-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+
+        </script>
+    <script src="fontawesome-pro/js/all.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
+
+    <!-- Adicionando Javascript -->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#uf").val("");
+                $("#ibge").val("");
+            }
+
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function () {
+
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if (validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
+
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
+
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
+        });
+
+   
+/*mostra e esconde div*/
+
+function show1() {
+            document.getElementById('divjuridico').style.display = 'none';
+        }
+        function show2() {
+            document.getElementById('divjuridico').style.display = 'block';
+        }
+
+        function desabilita(checkinscricao) {
+            var status = document.getElementById('inscricaoestadual').disable;
+            if (checkinscricao == 'sim' && !status) {
+                document.getElementById('inscricaoestadual').disabled = true;
+            } else {
+                document.getElementById('inscricaoestadual').disabled = false;
+            }
+        }
+
+        function desabilitar(valor) {
+            var status = document.getElementById('tel').disabled;
+
+            if (valor == 'sim' && !status) {
+                document.getElementById('tel').disabled = true;
+            } else {
+                document.getElementById('tel').disabled = false;
+            }
+        }
+
+
+
+        // ANCHOR
+
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+
+
+        //mostra esconde aba
+        function mostrar_abas(obj) {
+
+            document.getElementById('div_aba1').style.display = "none";
+            document.getElementById('div_aba2').style.display = "none";
+            document.getElementById('div_aba3').style.display = "none";
+
+           
+            
+
+
+            switch (obj.id) {
+                case 'mostra_aba1':
+                    document.getElementById('div_aba1').style.display = "block";
+                    break
+                case 'mostra_aba2':
+                    document.getElementById('div_aba2').style.display = "block";
+                    break
+                case 'mostra_aba3':
+                    document.getElementById('div_aba3').style.display = "block";
+                    break
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
