@@ -3897,72 +3897,6 @@ body {
   align-items: center;
   justify-content: center; }
 
-.azul {
-  background: #1373bf;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
-.verde1 {
-  background: #00a79d;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
-.verde2 {
-  background: #8cc731;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
-.laranja {
-  background: #feb02f;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
-.laranja2 {
-  background: #f45918;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
-.marrom {
-  background: #c55a11;
-  color: #fff;
-  padding: 16px 32px;
-  list-style: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem; }
-
 .tituloaba {
   text-align: center;
   font-size: 0.7rem; }
@@ -4160,5 +4094,97 @@ ul > li {
 #formulario #progress li.ativo:before, #formulario #profess li.ativo:after {
   background: #ccc;
   color: #fff; }
+
+.menususpenso {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  z-index: 999; }
+  .menususpenso li {
+    height: 120px; }
+
+.azul {
+  background: #0bbafb;
+  background: linear-gradient(128deg, #0bbafb 0%, #4285ec 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
+
+.verde1 {
+  background: #0bfb87;
+  background: linear-gradient(128deg, #0bfb87 0%, #00a79d 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
+
+.verde2 {
+  background: #418162;
+  background: linear-gradient(128deg, #418162 0%, #51e570 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
+
+.laranja {
+  background: #e5be7d;
+  background: linear-gradient(128deg, #e5be7d 0%, #feb02f 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
+
+.laranja2 {
+  background: #e5b228;
+  background: linear-gradient(128deg, #e5b228 0%, #f45918 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
+
+.marrom {
+  background: #da9f20;
+  background: linear-gradient(128deg, #da9f20 0%, #c55a11 100%);
+  color: #fff;
+  padding: 6px 12px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.1rem;
+  margin-left: 0.5rem; }
 
 /*# sourceMappingURL=main.css.map */
