@@ -4099,7 +4099,8 @@ ul > li {
   position: absolute;
   width: 150px;
   height: auto;
-  z-index: 999; }
+  z-index: 999;
+  border-radius: 8px; }
   .menususpenso li {
     height: 120px; }
 
@@ -4107,7 +4108,7 @@ ul > li {
   background: #0bbafb;
   background: linear-gradient(128deg, #0bbafb 0%, #4285ec 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4116,12 +4117,16 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .azul a {
+    color: #fff; }
+  .azul a:hover, .azul a:focus {
+    text-decoration: none; }
 
 .verde1 {
   background: #0bfb87;
   background: linear-gradient(128deg, #0bfb87 0%, #00a79d 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4130,12 +4135,16 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .verde1 a {
+    color: #fff; }
+  .verde1 a:hover, .verde1 a:focus {
+    text-decoration: none; }
 
 .verde2 {
   background: #418162;
   background: linear-gradient(128deg, #418162 0%, #51e570 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4144,12 +4153,16 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .verde2 a {
+    color: #fff; }
+  .verde2 a:hover, .verde2 a:focus {
+    text-decoration: none; }
 
 .laranja {
   background: #e5be7d;
   background: linear-gradient(128deg, #e5be7d 0%, #feb02f 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4158,12 +4171,16 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .laranja a {
+    color: #fff; }
+  .laranja a:hover, .laranja a:focus {
+    text-decoration: none; }
 
 .laranja2 {
   background: #e5b228;
   background: linear-gradient(128deg, #e5b228 0%, #f45918 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4172,12 +4189,16 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .laranja2 a {
+    color: #fff; }
+  .laranja2 a:hover, .laranja2 a:focus {
+    text-decoration: none; }
 
 .marrom {
   background: #da9f20;
   background: linear-gradient(128deg, #da9f20 0%, #c55a11 100%);
   color: #fff;
-  padding: 6px 12px;
+  padding: 9px 12px 0px;
   list-style: none;
   border-radius: 5px;
   display: flex;
@@ -4186,5 +4207,82 @@ ul > li {
   text-align: center;
   margin-top: 0.1rem;
   margin-left: 0.5rem; }
+  .marrom a {
+    color: #fff; }
+  .marrom a:hover, .marrom a:focus {
+    text-decoration: none; }
+
+.abamenususpenso {
+  width: 400px;
+  min-height: 200px;
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  animation-duration: 2s;
+  position: absolute;
+  left: 10rem;
+  top: 2px; }
+  .abamenususpenso span, .abamenususpenso a {
+    font-size: 0.7rem;
+    color: #fff; }
+  .abamenususpenso hr {
+    background: #fff; }
+
+.abamenususpensoAzul {
+  background: #0bbafb;
+  background: linear-gradient(128deg, #0bbafb 0%, #4285ec 100%); }
+
+.abamenususpensoverde1 {
+  background: #0bfb87;
+  background: linear-gradient(128deg, #0bfb87 0%, #00a79d 100%);
+  color: #fff; }
+
+.abamenususpensoverde2 {
+  background: #418162;
+  background: linear-gradient(128deg, #418162 0%, #51e570 100%);
+  color: #fff; }
+
+.abamenususpensolaranja {
+  background: #e5be7d;
+  background: linear-gradient(128deg, #e5be7d 0%, #feb02f 100%);
+  color: #fff; }
+
+.abamenususpensolaranja2 {
+  background: #e5b228;
+  background: linear-gradient(128deg, #e5b228 0%, #f45918 100%);
+  color: #fff; }
+
+.abamenususpensomarrom {
+  background: #da9f20;
+  background: linear-gradient(128deg, #da9f20 0%, #c55a11 100%);
+  color: #fff; }
+
+.itemmenususpenso {
+  position: relative; }
+  .itemmenususpenso h5 {
+    padding-top: 10px; }
+
+.btnservicos {
+  background: #42aee3;
+  color: #fff;
+  border: 0px;
+  border-radius: 0px; }
+
+.btnitemaba {
+  background: #092932;
+  color: #fff;
+  border: 0px;
+  border-radius: 0px;
+  margin-top: 10px;
+  border-radius: 8px; }
+
+.btnitemaba:hover {
+  color: #fff;
+  background: #06151a;
+  text-decoration: none; }
+
+.btnitemaba:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #007bff40; }
 
 /*# sourceMappingURL=main.css.map */

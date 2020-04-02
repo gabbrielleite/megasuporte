@@ -246,7 +246,7 @@ body {
     
 }
 @mixin divtitulo{
-  padding: 6px 12px;
+    padding: 9px 12px 0px;
     list-style: none;
     border-radius: 5px;
     display: flex;
@@ -255,6 +255,13 @@ body {
     text-align: center;
     margin-top: 0.1rem;
     margin-left: 0.5rem;
+    a{
+      color: #fff;
+    }
+    a:hover, a:focus {
+      text-decoration: none;
+      
+    }
     
 
 }    
@@ -270,11 +277,6 @@ body {
     font-size: 0.9rem !important;
   }
 }
-.abasuporte{
-
-}
-
-
 .textexpliactivo{
   padding: 10px;
   background: #efeded;
@@ -551,6 +553,7 @@ ul > li {
   width: 150px;
   height: auto;
   z-index: 999;
+  border-radius: 8px;
 
   li {
     
@@ -563,6 +566,7 @@ ul > li {
   background: linear-gradient(128deg, rgba(11,186,251,1) 0%, rgba(66,133,236,1) 100%);
   color: #fff;
   @include divtitulo();
+  
 }
 .verde1 {
   background: rgb(11,251,135);
@@ -594,3 +598,102 @@ ul > li {
   color: #fff;
   @include divtitulo();
 }
+
+
+.abamenususpenso{
+  width: 400px;
+  min-height: 200px ;
+  color: #fff;
+  padding: 1rem;
+  font-size: 0.9rem;
+  animation-duration: 2s;
+
+  position: absolute;
+  left: 10rem;
+  top: 2px;
+  span, a{
+    font-size: 0.7rem;
+    color: #fff;
+  }
+  hr {
+    background: #fff;
+  }
+ 
+}
+
+
+  
+.abamenususpensoAzul{
+  background: rgb(11,186,251);
+  background: linear-gradient(128deg, rgba(11,186,251,1) 0%, rgba(66,133,236,1) 100%);
+}
+
+
+
+.abamenususpensoverde1 {
+  background: rgb(11,251,135);
+  background: linear-gradient(128deg, rgba(11,251,135,1) 0%, rgba(0,167,157,1) 100%);
+  color: #fff;
+  
+}
+.abamenususpensoverde2 {
+  background: rgb(65,129,98);
+  background: linear-gradient(128deg, rgba(65,129,98,1) 0%, rgba(81,229,112,1) 100%);
+  color: #fff;
+  
+}
+.abamenususpensolaranja {
+  background: rgb(229,190,125);
+  background: linear-gradient(128deg, rgba(229,190,125,1) 0%, rgba(254,176,47,1) 100%);
+  color: #fff;
+  
+}
+.abamenususpensolaranja2 {
+  background: rgb(229,178,40);
+  background: linear-gradient(128deg, rgba(229,178,40,1) 0%, rgba(244,89,24,1) 100%);
+  color: #fff;
+  
+}
+.abamenususpensomarrom {
+  background: rgb(218,159,32);
+  background: linear-gradient(128deg, rgba(218,159,32,1) 0%, rgba(197,90,17,1) 100%);
+  color: #fff;
+  
+}
+.itemmenususpenso {
+  position: relative;
+  h5 {
+    padding-top: 10px;
+  }
+}
+
+
+
+.btnservicos{
+  background: #42aee3;
+  color: #fff;
+  border: 0px;
+  border-radius: 0px;
+}
+.btnitemaba {
+  background: #092932;
+  color: #fff;
+  border: 0px;
+  border-radius: 0px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.btnitemaba:hover {
+  color: #fff;
+  background: #06151a;
+  text-decoration: none;
+
+  
+}
+
+.btnitemaba:focus, .btn.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #007bff40;
+}
+

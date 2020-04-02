@@ -20,56 +20,170 @@
 <body>
 
 
-  <button id="btnmostra" class="btn btn-info btn-sm">Serviços</button>
+  <button id="btnmostra" class="btn btnservicos btn-sm">Serviços</button>
 
 
     <hr>
-    <div class="menususpenso"  id="mostra" style="display: none;">
-      
-     
-        <div class="">
-          <div class="tituloaba azul">
-            <h5><i class="fas fa-ambulance fa-2x"></i> <br>
-              Ajuda para <br> contratar</h5>
-          </div>
-          </div>
-     
-        <div class="">
-          <div class="tituloaba verde1">
-            <h5><i class="fas fa-exclamation-triangle fa-2x "></i> <br>
-              Problema <br> técnico </h5>
+    <div class="menususpenso "  id="mostra" style="display: none;">
+        <div class="itemmenususpenso">
+          <div class="tituloaba azul sombra">
+           <a href="#mostra_ajuda" onclick="mostrar_abas(this);" id="mostra_ajuda">
+            <i class="fas fa-ambulance fa-2x"></i> <h5>Ajuda para <br> contratar </h5>
               
+            </a>
+          </div>
+         
+          <div class="abamenususpenso abamenususpensoAzul text-center sombra" id="div_aba_ajuda" style="display:none;">
+            <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+            <a href="#">Saiba mais</a>  <br>
+            <hr style="background: #fff;">
+            <div class="row">
+              <div class="col-md-6">
+                À partir de: <br>
+                Plano Avulso: R$ 29,90 <br>
+                <button class="btn btnitemaba btn-sm">Contratar</button>
+              </div>
+              <div class="col-md-6" style="border-left: 1px solid #fff;">
+                Demais planos: R$ 0,00<br>
+                <span>Economize muito mais! <br>
+                <a href="#">Saiba mais</a></span>
+              </div>
+            </div>
+          </div>
+          </div>
+     
+        <div class="itemmenususpenso">
+          <div class="tituloaba verde1 sombra">
+            <a href="#mostra_prob" onclick="mostrar_abas(this);" id="mostra_prob">
+            <i class="fas fa-exclamation-triangle fa-2x "></i>
+             <h5> Problema <br> técnico </h5>
+              </a>
+          </div>
+          <div class="abamenususpenso abamenususpensoverde1 text-center sombra" id="div_aba_prob" style="display:none;">
+            <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+            <a href="#">Saiba mais</a>  <br>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                À partir de: <br>
+                Plano Avulso: R$ 29,90 <br>
+                <button class="btn btnitemaba btn-sm">Contratar</button>
+              </div>
+              <div class="col-md-6" style="border-left: 1px solid #fff;">
+                Demais planos: R$ 0,00<br>
+                <span>Economize muito mais! <br>
+                <a href="#">Saiba mais</a></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="itemmenususpenso">
+          <div class="tituloaba verde2 sombra">
+            <a href="#mostra_arquivos" onclick="mostrar_abas(this);" id="mostra_arquivos"> 
+            <i class="fab fa-windows fa-2x "></i> 
+              <h5>Arquivos e <br> programas </h5>
+              </a>
+          </div>
+          <div class="abamenususpenso abamenususpensoverde2 text-center sombra" id="div_aba_arquivos" style="display:none;">
+            <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+            <a href="#">Saiba mais</a>  <br>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                À partir de: <br>
+                Plano Avulso: R$ 29,90 <br>
+                <button class="btn btnitemaba btn-sm">Contratar</button>
+              </div>
+              <div class="col-md-6" style="border-left: 1px solid #fff;">
+                Demais planos: R$ 0,00<br>
+                <span>Economize muito mais! <br>
+                <a href="#">Saiba mais</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="itemmenususpenso">
+          <div class="tituloaba laranja sombra">
+            <a href="#mostra_melhorias" onclick="mostrar_abas(this);" id="mostra_melhorias"> 
+            <i class="fas fa-cogs fa-2x "></i><br>
+             <h5> Melhores <br> técnicas </h5>
+              </a>
           </div>
           
-        </div>
-        <div class="">
-          <div class="tituloaba verde2">
-            <h5><i class="fab fa-windows fa-2x "></i> <br>
-              Arquivos e <br> programas </h5>
+          <div class="abamenususpenso abamenususpensolaranja text-center sombra" id="div_aba_melhorias" style="display:none;">
+            <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+            <a href="#">Saiba mais</a>  <br>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                À partir de: <br>
+                Plano Avulso: R$ 29,90 <br>
+                <button class="btn btnitemaba btn-sm">Contratar</button>
+              </div>
+              <div class="col-md-6" style="border-left: 1px solid #fff;">
+                Demais planos: R$ 0,00<br>
+                <span>Economize muito mais! <br>
+                <a href="#">Saiba mais</a></span>
+              </div>
+            </div>
           </div>
-          
+
         </div>
-        <div class="">
-          <div class="tituloaba laranja">
-            <h5><i class="fas fa-cogs fa-2x "></i><br>
-              Melhores <br> técnicas </h5>
+        <div class="itemmenususpenso">
+          <div class="tituloaba laranja2 sombra">
+            <a href="#mostra_config" onclick="mostrar_abas(this);" id="mostra_config">         
+            <i class="fas fa-desktop fa-2x "></i><br>
+              <h5>Configuração e <br> acessos </h5>
+            </a> 
           </div>
-          
-        </div>
-        <div class="">
-          <div class="tituloaba laranja2">
-            <h5><i class="fas fa-desktop fa-2x "></i><br>
-              Configuração e <br> acessos </h5>
+        
+          <div class="abamenususpenso abamenususpensolaranja2 text-center sombra" id="div_aba_config" style="display:none;">
+            <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+            <a href="#">Saiba mais</a>  <br>
+            <hr>
+            <div class="row">
+              <div class="col-md-6">
+                À partir de: <br>
+                Plano Avulso: R$ 29,90 <br>
+                <button class="btn btnitemaba btn-sm">Contratar</button>
+              </div>
+              <div class="col-md-6" style="border-left: 1px solid #fff;">
+                Demais planos: R$ 0,00<br>
+                <span>Economize muito mais! <br>
+                <a href="#">Saiba mais</a></span>
+              </div>
+            </div>
           </div>
-          
         </div>
-        <div class="">
-          <div class="tituloaba marrom">
-            <h5><i class="fas fa-chart-bar fa-2x "></i><br>
-             Análise e <br> cotações</h5>
+        <div class="itemmenususpenso">
+          <div class="tituloaba marrom sombra">
+            <a href="#mostra_analise" onclick="mostrar_abas(this);" id="mostra_analise">
+            <i class="fas fa-chart-bar fa-2x "></i> <h5>Análise e <br> cotações</h5></a>
+             
+            
+          </div>
+        <div class="abamenususpenso abamenususpensomarrom text-center sombra" id="div_aba_analise" style="display:none;">
+          <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+          <a href="#">Saiba mais</a>  <br>
+          <hr>
+          <div class="row">
+            <div class="col-md-6">
+              À partir de: <br>
+              Plano Avulso: R$ 29,90 <br>
+              <button class="btn btnitemaba btn-sm">Contratar</button>
+            </div>
+            <div class="col-md-6" style="border-left: 1px solid #fff;">
+              Demais planos: R$ 0,00<br>
+              <span>Economize muito mais! <br>
+              <a href="#">Saiba mais</a></span>
+            </div>
           </div>
         </div>
 
+
+      </div>
       </div>
     </div>
  
@@ -222,36 +336,34 @@
     //mostra esconde aba
     function mostrar_abas(obj) {
 
-      document.getElementById('div_aba1').style.display = "none";
-      document.getElementById('div_aba2').style.display = "none";
-      document.getElementById('div_aba3').style.display = "none";
+      document.getElementById('div_aba_ajuda').style.display = "none";
+      document.getElementById('div_aba_prob').style.display = "none";
+      document.getElementById('div_aba_arquivos').style.display = "none";
 
-      document.getElementById('div_aba4').style.display = "none";
-      document.getElementById('div_aba5').style.display = "none";
-      document.getElementById('div_aba6').style.display = "none";
+      document.getElementById('div_aba_melhorias').style.display = "none";
+      document.getElementById('div_aba_config').style.display = "none";
+      document.getElementById('div_aba_analise').style.display = "none";
 
 
       switch (obj.id) {
-        case 'mostra_aba1':
-          document.getElementById('div_aba1').style.display = "block";
+        case 'mostra_ajuda':
+          document.getElementById('div_aba_ajuda').style.display  = "block";
           break
-        case 'mostra_aba2':
-          document.getElementById('div_aba2').style.display = "block";
+        case 'mostra_prob':
+          document.getElementById('div_aba_prob').style.display = "block";
           break
-        case 'mostra_aba3':
-          document.getElementById('div_aba3').style.display = "block";
+        case 'mostra_arquivos':
+          document.getElementById('div_aba_arquivos').style.display = "block";
           break
-        case 'mostra_aba4':
-          document.getElementById('div_aba4').style.display = "block";
+        case 'mostra_melhorias':
+          document.getElementById('div_aba_melhorias').style.display = "block";
           break
-        case 'mostra_aba5':
-          document.getElementById('div_aba5').style.display = "block";
+        case 'mostra_config':
+          document.getElementById('div_aba_config').style.display = "block";
           break
-        case 'mostra_aba6':
-          document.getElementById('div_aba6').style.display = "block";
+        case 'mostra_analise':
+          document.getElementById('div_aba_analise').style.display = "block";
           break
-
-
       }
     }
 
@@ -261,7 +373,11 @@
 
     $(document).ready(function(){
       $("#btnmostra").click(function(){
-      $("#mostra").toggle(100);
+      $("#mostra").toggle(200);
+
+      $("btnajuda").click(function(){
+        $("mostraajuda").toggle(200);
+      })
   });
 });
 
