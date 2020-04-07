@@ -625,7 +625,8 @@ body .navbar-toggler span {
 }
 .content {
   width: calc(100% - 200px);
-  margin: 110px 0 0 170px;
+  /* margin: 110px 0 0 170px; */
+  margin: 22px 0 0 170px;
   overflow: hidden;
   padding-bottom: 50px
 }
