@@ -5,448 +5,567 @@
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <!-- /Added by HTTrack -->
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<!-- CSRF Token -->
-<meta name="csrf-token" content="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
-<link rel="icon" href="img/logo1.png" type="image/x-icon">
-<script src="js/jquery-v3.3.1.js"></script>
-<title>MegaSuporte</title>
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
+    <link rel="icon" href="img/logo1.png" type="image/x-icon">
+    <script src="js/jquery-v3.3.1.js"></script>
+    <title>MegaSuporte</title>
 
-<!-- Styles -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<link href="css/fullhd.css" rel="stylesheet">
-<link href="css/responsivo.css" rel="stylesheet">
-<link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-<!-- css gabriel -->
-<link rel="stylesheet" href="fontawesome/css/all.css">
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
-<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <!-- Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/fullhd.css" rel="stylesheet">
+    <link href="css/responsivo.css" rel="stylesheet">
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <!-- css gabriel -->
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
+
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <a class="navbar-brand" href="index.html"> <img src="img/logo.svg" alt="MegaSuporte"> </a>
-  <div class="esconde-desktop"> <a class="btn btn-outline-primary " href="#" data-toggle="modal" data-target="#modalSignin"> <i class="icon-user"></i> Entrar </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="icon-menu"></span> </button>
-  </div>
-  <span style="margin-left:10rem!important;"></span>
-  <div class="mobile-hide"> <a class="btn btn-outline-primary" href="index.html"> <i class="fa fa-home"></i> Início </a> </div>
-  <div class="mobile-hide"> <a class="btn btn-outline-primary" href="aboutus.html"> <i class="fa fa-building"></i> Quem somos </a> </div>
-  <div class="mobile-hide"> <a class="btn btn-outline-primary" href="howitworks.html"> <i class="fa fa-tools"></i> Como funciona o serviço </a> </div>
-  <div class="mobile-hide"> <a class="btn btn-outline-primary" href="contactus.html"> <i class="fa fa-envelope"></i> Fale conosco </a> </div>
-  <div class="mobile-hide"> <a class="btn btn-outline-primary" href="subscriptions.html"> <i class="fa fa-handshake"></i> Nossos Planos </a> </div>
-  <span class="telefoneSuporte"><span><!--<b>Central de suporte</b>--></span> <!--<strong>0800-4400-4698</strong>--></span>
-  <div class="userTools float-right">
-    <div class="float-right" style="margin-left: 5px"> 
-      <!-- Authentication Links -->
-      <div class="mobile-hide"> <a class="btn btn-outline-primary border" href="#" data-toggle="modal" data-target="#modalSignin"> <i class="icon-user"></i> Entrar </a> </div>
-    </div>
-  </div>
-  <div class="esconde-mobile">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="icon-menu"></span> </button>
-  </div>
-  
-  <!-- menu suspenso    -->
-  
-  <div class="menususpenso "  id="mostra" style="display: none;">
-    <div class="itemmenususpenso">
-      <div class="tituloaba azul sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_ajuda"> <i class="fas fa-ambulance fa-2x"></i>
-        <h5>Ajuda para <br>
-          contratar </h5>
-        </a> </div>
-      <div class="abamenususpenso sombra" id="div_aba_ajuda" style="display:none;">
-        <div class="abamenususpensoAzul text-center ">
-          <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-          <a href="#">Saiba mais</a> <br>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top"> <a class="navbar-brand" href="index.html">
+            <img src="img/logo.svg" alt="MegaSuporte"> </a>
+        <div class="esconde-desktop"> <a class="btn btn-outline-primary " href="#" data-toggle="modal"
+                data-target="#modalSignin"> <i class="icon-user"></i> Entrar </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="icon-menu"></span> </button>
         </div>
-        <div class="p-3 conteudoservsuspenso ">
-          <div class="divvalor">
-            <div class="row pb-3 ">
-              <div class="col-md-6 pt-2 ">
-                <div style="position: relative;
+        <span style="margin-left:10rem!important;"></span>
+        <div class="mobile-hide"> <a class="btn btn-outline-primary" href="index.html"> <i class="fa fa-home"></i>
+                Início </a> </div>
+        <div class="mobile-hide"> <a class="btn btn-outline-primary" href="aboutus.html"> <i class="fa fa-building"></i>
+                Quem somos </a> </div>
+        <div class="mobile-hide"> <a class="btn btn-outline-primary" href="howitworks.html"> <i class="fa fa-tools"></i>
+                Como funciona o serviço </a> </div>
+        <div class="mobile-hide"> <a class="btn btn-outline-primary" href="contactus.html"> <i
+                    class="fa fa-envelope"></i> Fale conosco </a> </div>
+        <div class="mobile-hide"> <a class="btn btn-outline-primary" href="subscriptions.html"> <i
+                    class="fa fa-handshake"></i> Nossos Planos </a> </div>
+        <span class="telefoneSuporte"><span>
+                <!--<b>Central de suporte</b>--></span>
+            <!--<strong>0800-4400-4698</strong>--></span>
+        <div class="userTools float-right">
+            <div class="float-right" style="margin-left: 5px">
+                <!-- Authentication Links -->
+                <div class="mobile-hide"> <a class="btn btn-outline-primary border" href="#" data-toggle="modal"
+                        data-target="#modalSignin"> <i class="icon-user"></i> Entrar </a> </div>
+            </div>
+        </div>
+        <div class="esconde-mobile">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="icon-menu"></span> </button>
+        </div>
+
+        <!-- menu suspenso    -->
+
+        <div class="menususpenso " id="mostra" style="display: none;">
+            <div class="itemmenususpenso">
+                <div class="tituloaba azul sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_ajuda"> <i
+                            class="fas fa-ambulance fa-2x"></i>
+                        <h5>Ajuda para <br>
+                            contratar </h5>
+                    </a> </div>
+                
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_ajuda" style="display:none;">
+                <div class="abamenususpensoAzul text-center  p-3">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
+                    top: -6px;
+                    margin: -9px 0px -13px;
+                    font-size: 0.9rem;
+                    color: #000;
+                "> A partir de:</div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                    }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                                <!--  <span class="float-left">No Plano Avulso:</span><div class="col-md-6" style="font-size: 0.9rem;"> Avulso:<b>R$ 49,00 </b></div>
+                        <div class="col-md-6" style="border-left: solid 1px #ccc; font-size: 0.9rem;"> Assinantes: <b> R$ 0,00</b> -->
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemmenususpenso">
+                <div class="tituloaba verde1 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_prob"> <i
+                            class="fas fa-exclamation-triangle fa-2x "></i>
+                        <h5> Problema <br>
+                            técnico </h5>
+                    </a> </div>
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_prob" style="display:none;">
+                <div class="abamenususpensoverde1 text-center  p-3 ">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
+                    top: -6px;
+                    margin: -9px 0px -13px;
+                    font-size: 0.9rem;
+                    color: #000;
+                "> A partir de:</div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                    }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                                <!--  <span class="float-left">No Plano Avulso:</span><div class="col-md-6" style="font-size: 0.9rem;"> Avulso:<b>R$ 49,00 </b></div>
+                        <div class="col-md-6" style="border-left: solid 1px #ccc; font-size: 0.9rem;"> Assinantes: <b> R$ 0,00</b> -->
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemmenususpenso">
+                <div class="tituloaba verde2 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_arquivos"> <i
+                            class="fab fa-windows fa-2x "></i>
+                        <h5>Arquivos e <br>
+                            programas </h5>
+                    </a> </div>
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_arquivos" style="display:none;">
+                <div class="abamenususpensoverde2 text-center  p-3 ">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
+                    top: -6px;
+                    margin: -9px 0px -13px;
+                    font-size: 0.9rem;
+                    color: #000;
+                "> A partir de:</div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                    }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                                <!--  <span class="float-left">No Plano Avulso:</span><div class="col-md-6" style="font-size: 0.9rem;"> Avulso:<b>R$ 49,00 </b></div>
+                        <div class="col-md-6" style="border-left: solid 1px #ccc; font-size: 0.9rem;"> Assinantes: <b> R$ 0,00</b> -->
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemmenususpenso">
+                <div class="tituloaba laranja sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_melhorias">
+                        <i class="fas fa-cogs fa-2x "></i><br>
+                        <h5> Melhores <br>
+                            técnicas </h5>
+                    </a> </div>
+
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_melhorias" style="display:none;">
+                <div class="abamenususpensolaranja text-center p-3">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
                         top: -6px;
                         margin: -9px 0px -13px;
                         font-size: 0.9rem;
                         color: #000;
                     "> A partir de:</div>
-                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span> </div>
-              <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
-                <button type="button" class="btn btn-outline-info" style="margin-left: -25px;
-                        }"> Assinantes: <b> R$ 0,00 </b> <i
-                                    class="fal fa-info-circle"></i></button>
-                <!--  <span class="float-left">No Plano Avulso:</span><div class="col-md-6" style="font-size: 0.9rem;"> Avulso:<b>R$ 49,00 </b></div>
-                            <div class="col-md-6" style="border-left: solid 1px #ccc; font-size: 0.9rem;"> Assinantes: <b> R$ 0,00</b> --> 
-              </div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                        }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                                <!--  <span class="float-left">No Plano Avulso:</span><div class="col-md-6" style="font-size: 0.9rem;"> Avulso:<b>R$ 49,00 </b></div>
+                            <div class="col-md-6" style="border-left: solid 1px #ccc; font-size: 0.9rem;"> Assinantes: <b> R$ 0,00</b> -->
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
             </div>
-            <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
-          </div>
+            <div class="itemmenususpenso">
+                <div class="tituloaba laranja2 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_config"> <i
+                            class="fas fa-desktop fa-2x "></i><br>
+                        <h5>Configuração e <br>
+                            acessos </h5>
+                    </a> </div>
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_config" style="display:none;">
+                <div class="abamenususpensolaranja2 text-center p-3 ">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
+                        top: -6px;
+                        margin: -9px 0px -13px;
+                        font-size: 0.9rem;
+                        color: #000;
+                    "> A partir de:</div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                        }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
+            </div>
+            <div class="itemmenususpenso">
+                <div class="tituloaba marrom sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_analise"> <i
+                            class="fas fa-chart-bar fa-2x "></i>
+                        <h5>Análise e <br>
+                            cotações</h5>
+                    </a> </div>
+            </div>
+            <div class="abamenususpenso sombra" id="div_aba_analise" style="display:none;">
+                <div class="abamenususpensomarrom text-center p-3">
+                    <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
+                    <a href="#">Saiba mais</a> <br>
+                </div>
+                <div class="p-3 conteudoservsuspenso ">
+                    <div class="divvalor">
+                        <div class="row pb-3 ">
+                            <div class="col-md-6 pt-2 ">
+                                <div style="position: relative;
+                    top: -6px;
+                    margin: -9px 0px -13px;
+                    font-size: 0.9rem;
+                    color: #000;
+                "> A partir de:</div>
+                                Avulso:<span style="font-size: 1rem;"> <b>R$ 149,00 </b></span>
+                            </div>
+                            <div class="col-md-6" style="margin-left: -11px; font-size: 1rem;">
+                                <button type="button" class="btn btn-outline-info" style="margin-left: -10px;
+                    }"> Assinantes: <b> R$ 0,00 </b> <i class="fal fa-info-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="btn-primary text-center" style="padding: 10px;"><b>CONTRATAR</b></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </nav>
+    <div class="servlink ">
+        <button id="btnmostra" class="btn btnservicos btn-sm sombra">
+           <div class="menucoll" >
+                <hr>
+                <hr>
+                <hr>
+           </div>
+           <div style="float:left">Suportes <br>oferecidos</div>
+            </button>
+       
     </div>
-    <div class="itemmenususpenso">
-      <div class="tituloaba verde1 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_prob"> <i class="fas fa-exclamation-triangle fa-2x "></i>
-        <h5> Problema <br>
-          técnico </h5>
-        </a> </div>
-      <div class="abamenususpenso abamenususpensoverde1 text-center sombra" id="div_aba_prob" style="display:none;">
-        <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-        <a href="#">Saiba mais</a> <br>
-        <hr>
-        <div class="row">
-          <div class="col-md-6"> À partir de: <br>
-            Plano Avulso: R$ 29,90 <br>
-            <button class="btn btnitemaba btn-sm">Contratar</button>
-          </div>
-          <div class="col-md-6" style="border-left: 1px solid #fff;"> Demais planos: R$ 0,00<br>
-            <span>Economize muito mais! <br>
-            <a href="#">Saiba mais</a></span> </div>
-        </div>
-      </div>
-    </div>
-    <div class="itemmenususpenso">
-      <div class="tituloaba verde2 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_arquivos"> <i class="fab fa-windows fa-2x "></i>
-        <h5>Arquivos e <br>
-          programas </h5>
-        </a> </div>
-      <div class="abamenususpenso abamenususpensoverde2 text-center sombra" id="div_aba_arquivos" style="display:none;">
-        <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-        <a href="#">Saiba mais</a> <br>
-        <hr>
-        <div class="row">
-          <div class="col-md-6"> À partir de: <br>
-            Plano Avulso: R$ 29,90 <br>
-            <button class="btn btnitemaba btn-sm">Contratar</button>
-          </div>
-          <div class="col-md-6" style="border-left: 1px solid #fff;"> Demais planos: R$ 0,00<br>
-            <span>Economize muito mais! <br>
-            <a href="#">Saiba mais</a></span> </div>
-        </div>
-      </div>
-    </div>
-    <div class="itemmenususpenso">
-      <div class="tituloaba laranja sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_melhorias"> <i class="fas fa-cogs fa-2x "></i><br>
-        <h5> Melhores <br>
-          técnicas </h5>
-        </a> </div>
-      <div class="abamenususpenso abamenususpensolaranja text-center sombra" id="div_aba_melhorias" style="display:none;">
-        <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-        <a href="#">Saiba mais</a> <br>
-        <hr>
-        <div class="row">
-          <div class="col-md-6"> À partir de: <br>
-            Plano Avulso: R$ 29,90 <br>
-            <button class="btn btnitemaba btn-sm">Contratar</button>
-          </div>
-          <div class="col-md-6" style="border-left: 1px solid #fff;"> Demais planos: R$ 0,00<br>
-            <span>Economize muito mais! <br>
-            <a href="#">Saiba mais</a></span> </div>
-        </div>
-      </div>
-    </div>
-    <div class="itemmenususpenso">
-      <div class="tituloaba laranja2 sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_config"> <i class="fas fa-desktop fa-2x "></i><br>
-        <h5>Configuração e <br>
-          acessos </h5>
-        </a> </div>
-      <div class="abamenususpenso abamenususpensolaranja2 text-center sombra" id="div_aba_config" style="display:none;">
-        <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-        <a href="#">Saiba mais</a> <br>
-        <hr>
-        <div class="row">
-          <div class="col-md-6"> À partir de: <br>
-            Plano Avulso: R$ 29,90 <br>
-            <button class="btn btnitemaba btn-sm">Contratar</button>
-          </div>
-          <div class="col-md-6" style="border-left: 1px solid #fff;"> Demais planos: R$ 0,00<br>
-            <span>Economize muito mais! <br>
-            <a href="#">Saiba mais</a></span> </div>
-        </div>
-      </div>
-    </div>
-    <div class="itemmenususpenso">
-      <div class="tituloaba marrom sombra"> <a href="#" onclick="mostrar_abas(this);" id="mostra_analise"> <i class="fas fa-chart-bar fa-2x "></i>
-        <h5>Análise e <br>
-          cotações</h5>
-        </a> </div>
-      <div class="abamenususpenso abamenususpensomarrom text-center sombra" id="div_aba_analise" style="display:none;">
-        <h5>Caso não saiba qual serviço contratar, nós iremos te ajudar!</h5>
-        <a href="#">Saiba mais</a> <br>
-        <hr>
-        <div class="row">
-          <div class="col-md-6"> À partir de: <br>
-            Plano Avulso: R$ 29,90 <br>
-            <button class="btn btnitemaba btn-sm">Contratar</button>
-          </div>
-          <div class="col-md-6" style="border-left: 1px solid #fff;"> Demais planos: R$ 0,00<br>
-            <span>Economize muito mais! <br>
-            <a href="#">Saiba mais</a></span> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-<div class="servlink">
-  <button id="btnmostra" class="btn btnservicos btn-sm">Serviços</button>
-</div>
-<style type="text/css">
+    <style type="text/css">
+        .btnFacebook,
+        .btnGoogle {
+            width: 100%;
+            margin: 10px 0;
+            background: #3F82F9 !important;
+            color: #fff;
+            text-align: left;
+        }
+    </style>
+    <div class="modal fade modalConta" id="modalSignin" tabindex="-1" role="dialog" aria-labelledby="modalSigninTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSigninTitle">Acesse sua conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span
+                            class="icon-cross" onclick="$('#btnModalSiginReset').click();"></span> </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal login" method="POST" action="http://localhost.megasuporte.com/login"
+                        id="formModalSignin">
+                        <input type="hidden" name="_token" value="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
+                        <input type="reset" id="btnModalSiginReset" style="display: none">
+                        <input type="hidden" name="origin" value="modal">
+                        <div class="form-group">
+                            <label for="inpt-email">Email</label>
+                            <input id="inpt-email" type="email" name="email" class="form-control" value="" required
+                                autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordSign">Senha</label>
+                            <input id="passwordSign" type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <div data-sitekey="" class="g-recaptcha"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-login">Entrar</button>
+                            <a class="btn btn-link" href="password/reset.html"> Esqueceu sua senha? </a> </div>
+                        <!--                    <div class="divider"><span>ou</span></div>-->
+                        <!--                    <a href="http://localhost.megasuporte.com/auth/google" class="btn btn-light btnGoogle" style="background: #3F82F9 !important;"><i class="icon-google"></i> Continuar com Google</a>-->
+                        <!--                    <a href="http://localhost.megasuporte.com/auth/facebook" class="btn btn-light btnFacebook" style="background: #3A589B !important;"><i class="icon-facebook"></i> Continuar com Facebook</a>-->
 
-    .btnFacebook, .btnGoogle {
-        width: 100%;
-        margin: 10px 0;
-        background: #3F82F9 !important; color: #fff;
-        text-align: left;
-    }
-
-</style>
-<div class="modal fade modalConta" id="modalSignin" tabindex="-1" role="dialog" aria-labelledby="modalSigninTitle"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalSigninTitle">Acesse sua conta</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span class="icon-cross" onclick="$('#btnModalSiginReset').click();"></span> </button>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal login" method="POST" action="http://localhost.megasuporte.com/login" id="formModalSignin">
-          <input type="hidden" name="_token" value="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
-          <input type="reset" id="btnModalSiginReset" style="display: none">
-          <input type="hidden" name="origin" value="modal">
-          <div class="form-group">
-            <label for="inpt-email">Email</label>
-            <input id="inpt-email" type="email" name="email" class="form-control"  value=""
-                               required autofocus>
-          </div>
-          <div class="form-group">
-            <label for="passwordSign">Senha</label>
-            <input id="passwordSign" type="password" class="form-control" name="password" required>
-          </div>
-          <div class="form-group">
-            <div data-sitekey="" class="g-recaptcha"></div>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-login">Entrar</button>
-            <a class="btn btn-link" href="password/reset.html"> Esqueceu sua senha? </a> </div>
-          <!--                    <div class="divider"><span>ou</span></div>--> 
-          <!--                    <a href="http://localhost.megasuporte.com/auth/google" class="btn btn-light btnGoogle" style="background: #3F82F9 !important;"><i class="icon-google"></i> Continuar com Google</a>--> 
-          <!--                    <a href="http://localhost.megasuporte.com/auth/facebook" class="btn btn-light btnFacebook" style="background: #3A589B !important;"><i class="icon-facebook"></i> Continuar com Facebook</a>--> 
-          
-          <!--                    <p>Ainda não tem uma conta?</p>--> 
-          <!--                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalSignup"--> 
-          <!--                            onclick="$('#modalSignin').modal('hide');$('#btnModalSiginReset').click();">Criar conta--> 
-          <!--                    </button>-->
-        </form>
-      </div>
+                        <!--                    <p>Ainda não tem uma conta?</p>-->
+                        <!--                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalSignup"-->
+                        <!--                            onclick="$('#modalSignin').modal('hide');$('#btnModalSiginReset').click();">Criar conta-->
+                        <!--                    </button>-->
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script type="text/javascript">
-    $(document).ready(function () {
-        
-            });
-</script> 
-<!-- Modal sign-up-->
-<div class="modal fade modalConta show" id="modalSignup" tabindex="-1" role="dialog" aria-labelledby="modalSignupTitle"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="modalSignupTitle">Criar conta</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                            class="icon-cross" onclick="$('#btnModalSigupReset').click();"></span></button>
-      </div>
-      <div class="modal-body">
-        <form class="form-horizontal" method="POST" action="http://localhost.megasuporte.com/register">
-          <input type="hidden" name="_token" value="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
-          <input type="reset" id="btnModalSigupReset" style="display: none">
-          <input type="hidden" name="origin" value="modal">
-          
-          <!--                    <button class="btn btn-light btnGoogle"><i class="icon-google"></i> Continuar com Google</button>--> 
-          <!--                    <button class="btn btn-light btnFacebook"><i class="icon-facebook"></i> Continuar com Facebook--> 
-          <!--                    </button>--> 
-          <!--                    <div class="divider"><span>ou</span></div>-->
-          
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input id="email" type="email" class="form-control" name="email" value="" required>
-          </div>
-          <div class="form-group">
-            <label>Senha</label>
-            <input id="password" type="password" class="form-control" name="password" required>
-          </div>
-          <div class="form-group">
-            <label>Repita a senha</label>
-            <input id="password-confirmSignup" type="password" class="form-control" name="password_confirmation" required>
-            <button type="submit" class="btn btn-primary">Criar</button>
-            <small id="emailHelp" class="form-text text-muted">Ao clicar em “Criar”, você estará concordando
-            com o nossos <a href="terms_of_usage.html">Termos e Condições</a> e <a href="privacy_policy.html">Política de Privacidade</a>. </small> </div>
-          <p>Você já tem uma conta da Mega Suporte?</p>
-          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalSignin"
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+    <!-- Modal sign-up-->
+    <div class="modal fade modalConta show" id="modalSignup" tabindex="-1" role="dialog"
+        aria-labelledby="modalSignupTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalSignupTitle">Criar conta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span class="icon-cross"
+                            onclick="$('#btnModalSigupReset').click();"></span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" method="POST" action="http://localhost.megasuporte.com/register">
+                        <input type="hidden" name="_token" value="gjwjui1u9TmSEBCFRIzR7w8j4hCB2hXKJ0Qmnnxy">
+                        <input type="reset" id="btnModalSigupReset" style="display: none">
+                        <input type="hidden" name="origin" value="modal">
+
+                        <!--                    <button class="btn btn-light btnGoogle"><i class="icon-google"></i> Continuar com Google</button>-->
+                        <!--                    <button class="btn btn-light btnFacebook"><i class="icon-facebook"></i> Continuar com Facebook-->
+                        <!--                    </button>-->
+                        <!--                    <div class="divider"><span>ou</span></div>-->
+
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input id="name" type="text" class="form-control" name="name" value="" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" type="email" class="form-control" name="email" value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input id="password" type="password" class="form-control" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Repita a senha</label>
+                            <input id="password-confirmSignup" type="password" class="form-control"
+                                name="password_confirmation" required>
+                            <button type="submit" class="btn btn-primary">Criar</button>
+                            <small id="emailHelp" class="form-text text-muted">Ao clicar em “Criar”, você estará
+                                concordando
+                                com o nossos <a href="terms_of_usage.html">Termos e Condições</a> e <a
+                                    href="privacy_policy.html">Política de Privacidade</a>. </small> </div>
+                        <p>Você já tem uma conta da Mega Suporte?</p>
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#modalSignin"
                             onclick="$('#btnModalSigupReset').click();$('#modalSignup').modal('hide');">Entrar </button>
-        </form>
-      </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div class="banner"> <img src="img/banner.png" class="poster"> <img src="img/logo.svg" class="logo wow fadeInDown">
-  <h2 class="wow fadeInUp"> O Suporte Técnico <span>que soluciona os problemas de TI da sua empresa de forma rápida!</span> </h2>
-</div>
-<div class="sectionIntro">
-  <h3 class="centerTittle">Resolver o seu problema é Mega Simples</h3>
-  <div class="devices">
-    <div class="itens">
-      <div class="item"> <i class="icon-laptop"></i>
-        <p>Computadores e dispositivos</p>
-      </div>
-      <div class="item"> <i class="fa fa-wifi"></i>
-        <p>Internet / <br>
-          Wi-Fi </p>
-      </div>
-      <div class="item"> <i class="icon-database"></i>
-        <p>Rede de dados</p>
-      </div>
-      <div class="item"> <i class="icon-verified_user"></i>
-        <p>Segurança dos dados</p>
-      </div>
-      <div class="item"> <i class="fas fa-phone-volume"></i>
-        <p>Telefonia fixa</p>
-      </div>
+    <div class="banner"> <img src="img/banner.png" class="poster"> <img src="img/logo.svg" class="logo wow fadeInDown">
+        <h2 class="wow fadeInUp"> O Suporte Técnico <span>que soluciona os problemas de TI da sua empresa de forma
+                rápida!</span> </h2>
     </div>
-  </div>
-  <p class="resume">Não importa aonde você esteja, basta estar conectado na internet, solicitar um chamado <br>
-    que em poucos minutos nós entraremos em contato para resolver o seu problema. </p>
-</div>
-<div class="sectionSecurity"> <img src="img/poster-02.png" alt="">
-  <div class="container cardTop">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".3s"> <i class="icon-check-circle"></i>
-          <h3>MEGA FÁCIL</h3>
-          <p>Em poucos cliques você informa o seu problema e contrata um serviço técnico.</p>
+    <div class="sectionIntro">
+        <h3 class="centerTittle">Resolver o seu problema é Mega Simples</h3>
+        <div class="devices">
+            <div class="itens">
+                <div class="item"> <i class="icon-laptop"></i>
+                    <p>Computadores e dispositivos</p>
+                </div>
+                <div class="item"> <i class="fa fa-wifi"></i>
+                    <p>Internet / <br>
+                        Wi-Fi </p>
+                </div>
+                <div class="item"> <i class="icon-database"></i>
+                    <p>Rede de dados</p>
+                </div>
+                <div class="item"> <i class="icon-verified_user"></i>
+                    <p>Segurança dos dados</p>
+                </div>
+                <div class="item"> <i class="fas fa-phone-volume"></i>
+                    <p>Telefonia fixa</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".4s"> <i class="icon-stopwatch1 maximize"></i>
-          <h3>MEGA RÁPIDO</h3>
-          <p>Em instantes, um de nossos atendentes entrará em contrato para resolver o seu problema.</p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".5s"> <i class="icon-pc-contact"></i>
-          <h3>MEGA ÚTIL</h3>
-          <p>Oferecemos todos os serviços técnicos que a sua empresa precisa no dia a dia.</p>
-        </div>
-      </div>
+        <p class="resume">Não importa aonde você esteja, basta estar conectado na internet, solicitar um chamado <br>
+            que em poucos minutos nós entraremos em contato para resolver o seu problema. </p>
     </div>
-  </div>
-  <div class="sectionInfo"> <i class="icon-security"></i>
-    <h3>MEGA SEGURO</h3>
-    <p> Garantimos toda a segurança e privacidade dos seus arquivos durante o atendimento.</p>
-  </div>
-  <div class="container cardBottom">
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".3s">
-          <div class="cardHeader"> Autorização <i class="icon-notice"></i> </div>
-          <p>Após você autorizar o atendimento realizamos uma conexão segura com o seu dispositivo.</p>
+    <div class="sectionSecurity"> <img src="img/poster-02.png" alt="">
+        <div class="container cardTop">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".3s"> <i class="icon-check-circle"></i>
+                        <h3>MEGA FÁCIL</h3>
+                        <p>Em poucos cliques você informa o seu problema e contrata um serviço técnico.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".4s"> <i class="icon-stopwatch1 maximize"></i>
+                        <h3>MEGA RÁPIDO</h3>
+                        <p>Em instantes, um de nossos atendentes entrará em contrato para resolver o seu problema.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".5s"> <i class="icon-pc-contact"></i>
+                        <h3>MEGA ÚTIL</h3>
+                        <p>Oferecemos todos os serviços técnicos que a sua empresa precisa no dia a dia.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".4s">
-          <div class="cardHeader"> Atendimento <i class="icon-remoto"></i> </div>
-          <p>O nosso técnico solucionará o problema, bem diante dos seus olhos.</p>
+        <div class="sectionInfo"> <i class="icon-security"></i>
+            <h3>MEGA SEGURO</h3>
+            <p> Garantimos toda a segurança e privacidade dos seus arquivos durante o atendimento.</p>
         </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card wow bounceInUp" data-wow-delay=".5s">
-          <div class="cardHeader"> Armazenamento <i class="icon-server"></i> </div>
-          <p>Todas as ações realizadas ficam registradas e gravadas, podendo ser acessadas quando quiser.</p>
+        <div class="container cardBottom">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".3s">
+                        <div class="cardHeader"> Autorização <i class="icon-notice"></i> </div>
+                        <p>Após você autorizar o atendimento realizamos uma conexão segura com o seu dispositivo.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".4s">
+                        <div class="cardHeader"> Atendimento <i class="icon-remoto"></i> </div>
+                        <p>O nosso técnico solucionará o problema, bem diante dos seus olhos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card wow bounceInUp" data-wow-delay=".5s">
+                        <div class="cardHeader"> Armazenamento <i class="icon-server"></i> </div>
+                        <p>Todas as ações realizadas ficam registradas e gravadas, podendo ser acessadas quando quiser.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</div>
-<div class="sectionVantagens">
-  <div class="poster"> <img src="img/phone.png" class="imgFloat wow flipInY" data-wow-delay=".5s"> <img src="img/poster-03.png" class="imgPoster"> </div>
-  <div class="info wow fadeIn">
-    <div class="title"> <i class="icon-handshake-o"></i>
-      <h3>Nossos clientes contam </br>
-        com Mega vantagens</h3>
+    <div class="sectionVantagens">
+        <div class="poster"> <img src="img/phone.png" class="imgFloat wow flipInY" data-wow-delay=".5s"> <img
+                src="img/poster-03.png" class="imgPoster"> </div>
+        <div class="info wow fadeIn">
+            <div class="title"> <i class="icon-handshake-o"></i>
+                <h3>Nossos clientes contam </br>
+                    com Mega vantagens</h3>
+            </div>
+            <ul>
+                <li><a><i class="icon-cheveron-outline-right"></i> Resolvemos o seu problema em qualquer lugar que
+                        esteja.</a></li>
+                <li><a><i class="icon-cheveron-outline-right"></i> A contratação é simples e o atendimento rápido e
+                        seguro.</a></li>
+                <li><a><i class="icon-cheveron-outline-right"></i> Custa mais barato do que o serviço técnico
+                        tradicional.</a></li>
+                <li><a><i class="icon-cheveron-outline-right"></i> Conte com uma equipe técnica à disposição da sua
+                        empresa.</a></li>
+                <li><a><i class="icon-cheveron-outline-right"></i> Praticidade e conforto nos atendimentos, nós ligamos
+                        para você. </a></li>
+                <li><a><i class="icon-cheveron-outline-right"></i> Temos todos os serviços que a sua empresa precisa no
+                        dia a dia.</a></li>
+            </ul>
+        </div>
     </div>
-    <ul>
-      <li><a><i class="icon-cheveron-outline-right"></i> Resolvemos o seu problema em qualquer lugar que esteja.</a></li>
-      <li><a><i class="icon-cheveron-outline-right"></i> A contratação é simples e o atendimento rápido e seguro.</a></li>
-      <li><a><i class="icon-cheveron-outline-right"></i> Custa mais barato do que o serviço técnico tradicional.</a></li>
-      <li><a><i class="icon-cheveron-outline-right"></i> Conte com uma equipe técnica à disposição da sua empresa.</a></li>
-      <li><a><i class="icon-cheveron-outline-right"></i> Praticidade e conforto nos atendimentos, nós ligamos para você. </a></li>
-      <li><a><i class="icon-cheveron-outline-right"></i> Temos todos os serviços que a sua empresa precisa no dia a dia.</a></li>
-    </ul>
-  </div>
-</div>
-<div class="footer">
-  <div class="container">
-    <div class="top">
-      <div class="row">
-        <div class="col-lg-4">
-          <h5>Horário de atendimento</h5>
-          <p>De segunda a sexta feira <br>
-            das 08:00 às 18:00 horas</p>
-          <p>Exceto feriados</p>
+    <div class="footer">
+        <div class="container">
+            <div class="top">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h5>Horário de atendimento</h5>
+                        <p>De segunda a sexta feira <br>
+                            das 08:00 às 18:00 horas</p>
+                        <p>Exceto feriados</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Endereço</h5>
+                        <p>Quadra 1 Conjunto A, Edifício Le Quarter, <br>
+                            Sala 523, Asa Norte - Brasília (DF) <br />
+                            CEP: 70.701-000</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5>Contato</h5>
+                        <p>Central SAC: (61) 3326-8334 <br />
+                            E-mail: <a href="mailto:atendimento@megasuporte.com"
+                                style="color: white">atendimento@megasuporte.com</a></p>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p> <a style="color: #f9fcf7" href="aboutus.html">Quem somos</a> | <a style="color: #f9fcf7"
+                                href="howitworks.html">Como funciona o serviço</a> | <a style="color: #f9fcf7"
+                                href="contactus.html">Fale conosco</a> | <a style="color: #f9fcf7"
+                                href="subscriptions.html">Nossos Planos</a> | <a style="color: #f9fcf7"
+                                href="faq.html">FAQs</a> | <a style="color: #f9fcf7"
+                                href="privacy_policy.html">Políticas de privacidade</a> | <a style="color: #f9fcf7"
+                                href="terms_of_usage.html">Termos de uso</a> </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-4">
-          <h5>Endereço</h5>
-          <p>Quadra 1 Conjunto A, Edifício Le Quarter, <br>
-            Sala 523, Asa Norte - Brasília (DF) <br />
-            CEP: 70.701-000</p>
-        </div>
-        <div class="col-lg-4">
-          <h5>Contato</h5>
-          <p>Central SAC: (61) 3326-8334 <br />
-            E-mail: <a href="mailto:atendimento@megasuporte.com" style="color: white">atendimento@megasuporte.com</a></p>
-        </div>
-      </div>
-      <br>
-      <br>
-      <br>
-      <div class="row">
-        <div class="col-lg-12">
-          <p> <a style="color: #f9fcf7" href="aboutus.html">Quem somos</a> | <a style="color: #f9fcf7" href="howitworks.html">Como funciona o serviço</a> | <a style="color: #f9fcf7" href="contactus.html">Fale conosco</a> | <a style="color: #f9fcf7" href="subscriptions.html">Nossos Planos</a> | <a style="color: #f9fcf7" href="faq.html">FAQs</a> | <a style="color: #f9fcf7" href="privacy_policy.html">Políticas de privacidade</a> | <a style="color: #f9fcf7" href="terms_of_usage.html">Termos de uso</a> </p>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-<div class="footerBottom">
-  <div class="container">
-    <ul class="linkMidias">
-      <li><a target="_blank" href="https://pt-br.facebook.com/megasuporte.brasil/"><i class="icon-facebook"></i></a></li>
-      <li><a href="#"><i class="icon-twitter"></i></a></li>
-      <li><a target="_blank" href="https://www.instagram.com/megasuporte.brasil/"><i class="icon-instagram1"></i></a></li>
-    </ul>
-    <div class="row">
-      <div class="col-lg-3"> <img src="img/footer-img-01.png" alt=""> </div>
-      <div class="col-lg-6">
-        <p><span>© 2018 MegaSuporte.</span> Todos os direitos reservados.</p>
-      </div>
-      <div class="col-lg-3"> <img src="img/footer-img-02.png" alt=""> </div>
+    <div class="footerBottom">
+        <div class="container">
+            <ul class="linkMidias">
+                <li><a target="_blank" href="https://pt-br.facebook.com/megasuporte.brasil/"><i
+                            class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/megasuporte.brasil/"><i
+                            class="icon-instagram1"></i></a></li>
+            </ul>
+            <div class="row">
+                <div class="col-lg-3"> <img src="img/footer-img-01.png" alt=""> </div>
+                <div class="col-lg-6">
+                    <p><span>© 2018 MegaSuporte.</span> Todos os direitos reservados.</p>
+                </div>
+                <div class="col-lg-3"> <img src="img/footer-img-02.png" alt=""> </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<!-- Scripts --> 
+    <!-- Scripts -->
 
-<script src="js/bootstrap.min.js"></script> 
-<script src="js/wow.js"></script> 
-<script src="js/main.js"></script> 
-<script type="text/javascript">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
         $(document).ready(function () {
             $('#cart-icon').click(function () {
                 var retorno = '';
@@ -458,20 +577,20 @@
                         retorno = 'logado';
                     }
 
-                    if(retorno == 'logado') {
+                    if (retorno == 'logado') {
                         window.location.href = 'login.html'
                     }
                 });
 
             });
         });
-    </script> 
-<script>
+    </script>
+    <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         })
-    </script> 
-<script type="text/javascript">
+    </script>
+    <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
 
         (function () {
@@ -482,205 +601,195 @@
             s1.setAttribute('crossorigin', '*');
             s0.parentNode.insertBefore(s1, s0);
         })();
-    </script> 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119015626-1"></script> 
-<script>
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119015626-1"></script>
+    <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'UA-119015626-1');
-    </script> 
-<script src="../www.google.com/recaptcha/api02b8.js?hl=pt-BR" async defer></script> 
+    </script>
+    <script src="../www.google.com/recaptcha/api02b8.js?hl=pt-BR" async defer></script>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
-  <script src="js/jquery-3.3.1.min.js"></script>--> 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) 
+  <script src="js/jquery-3.3.1.min.js"></script>-->
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
 
-  </script> 
-<script src="fontawesome-pro/js/all.js"></script> 
+        </script>
+    <script src="fontawesome-pro/js/all.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.3.1.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.3.1.js"></script>
 
-<!-- Adicionando Javascript --> 
-<script type="text/javascript">
+    <!-- Adicionando Javascript -->
+    <script type="text/javascript">
 
-  $(document).ready(function () {
+        $(document).ready(function () {
 
-    function limpa_formulário_cep() {
-      // Limpa valores do formulário de cep.
-      $("#rua").val("");
-      $("#bairro").val("");
-      $("#cidade").val("");
-      $("#uf").val("");
-      $("#ibge").val("");
-    }
-
-    //Quando o campo cep perde o foco.
-    $("#cep").blur(function () {
-
-      //Nova variável "cep" somente com dígitos.
-      var cep = $(this).val().replace(/\D/g, '');
-
-      //Verifica se campo cep possui valor informado.
-      if (cep != "") {
-
-        //Expressão regular para validar o CEP.
-        var validacep = /^[0-9]{8}$/;
-
-        //Valida o formato do CEP.
-        if (validacep.test(cep)) {
-
-          //Preenche os campos com "..." enquanto consulta webservice.
-          $("#rua").val("...");
-          $("#bairro").val("...");
-          $("#cidade").val("...");
-          $("#uf").val("...");
-          $("#ibge").val("...");
-
-          //Consulta o webservice viacep.com.br/
-          $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
-
-            if (!("erro" in dados)) {
-              //Atualiza os campos com os valores da consulta.
-              $("#rua").val(dados.logradouro);
-              $("#bairro").val(dados.bairro);
-              $("#cidade").val(dados.localidade);
-              $("#uf").val(dados.uf);
-              $("#ibge").val(dados.ibge);
-            } //end if.
-            else {
-              //CEP pesquisado não foi encontrado.
-              limpa_formulário_cep();
-              alert("CEP não encontrado.");
+            function limpa_formulário_cep() {
+                // Limpa valores do formulário de cep.
+                $("#rua").val("");
+                $("#bairro").val("");
+                $("#cidade").val("");
+                $("#uf").val("");
+                $("#ibge").val("");
             }
-          });
-        } //end if.
-        else {
-          //cep é inválido.
-          limpa_formulário_cep();
-          alert("Formato de CEP inválido.");
-        }
-      } //end if.
-      else {
-        //cep sem valor, limpa formulário.
-        limpa_formulário_cep();
-      }
-    });
-  });
 
-  /*mostra e esconde div*/
+            //Quando o campo cep perde o foco.
+            $("#cep").blur(function () {
 
-  function show1() {
-    document.getElementById('divjuridico').style.display = 'none';
-  }
-  function show2() {
-    document.getElementById('divjuridico').style.display = 'block';
-  }
+                //Nova variável "cep" somente com dígitos.
+                var cep = $(this).val().replace(/\D/g, '');
 
-  function desabilita(checkinscricao) {
-    var status = document.getElementById('inscricaoestadual').disable;
-    if (checkinscricao == 'sim' && !status) {
-      document.getElementById('inscricaoestadual').disabled = true;
-    } else {
-      document.getElementById('inscricaoestadual').disabled = false;
-    }
-  }
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
 
-  function desabilitar(valor) {
-    var status = document.getElementById('tel').disabled;
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
 
-    if (valor == 'sim' && !status) {
-      document.getElementById('tel').disabled = true;
-    } else {
-      document.getElementById('tel').disabled = false;
-    }
-  }
+                    //Valida o formato do CEP.
+                    if (validacep.test(cep)) {
 
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        $("#rua").val("...");
+                        $("#bairro").val("...");
+                        $("#cidade").val("...");
+                        $("#uf").val("...");
+                        $("#ibge").val("...");
 
-  // ANCHOR
+                        //Consulta o webservice viacep.com.br/
+                        $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
 
-  $(document).ready(function () {
-    // Add smooth scrolling to all links
-    $("a").on('click', function (event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function () {
-
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
+                            if (!("erro" in dados)) {
+                                //Atualiza os campos com os valores da consulta.
+                                $("#rua").val(dados.logradouro);
+                                $("#bairro").val(dados.bairro);
+                                $("#cidade").val(dados.localidade);
+                                $("#uf").val(dados.uf);
+                                $("#ibge").val(dados.ibge);
+                            } //end if.
+                            else {
+                                //CEP pesquisado não foi encontrado.
+                                limpa_formulário_cep();
+                                alert("CEP não encontrado.");
+                            }
+                        });
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            });
         });
-      } // End if
-    });
-  });
+        /*mostra e esconde div*/
+
+        function show1() {
+            document.getElementById('divjuridico').style.display = 'none';
+        }
+        function show2() {
+            document.getElementById('divjuridico').style.display = 'block';
+        }
+
+        function desabilita(checkinscricao) {
+            var status = document.getElementById('inscricaoestadual').disable;
+            if (checkinscricao == 'sim' && !status) {
+                document.getElementById('inscricaoestadual').disabled = true;
+            } else {
+                document.getElementById('inscricaoestadual').disabled = false;
+            }
+        }
+
+        function desabilitar(valor) {
+            var status = document.getElementById('tel').disabled;
+
+            if (valor == 'sim' && !status) {
+                document.getElementById('tel').disabled = true;
+            } else {
+                document.getElementById('tel').disabled = false;
+            }
+        }
+        // ANCHOR
+
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+        //mostra esconde aba
+        function mostrar_abas(obj) {
+
+            document.getElementById('div_aba_ajuda').style.display = "none";
+            document.getElementById('div_aba_prob').style.display = "none";
+            document.getElementById('div_aba_arquivos').style.display = "none";
+
+            document.getElementById('div_aba_melhorias').style.display = "none";
+            document.getElementById('div_aba_config').style.display = "none";
+            document.getElementById('div_aba_analise').style.display = "none";
 
 
+            switch (obj.id) {
+                case 'mostra_ajuda':
+                    document.getElementById('div_aba_ajuda').style.display = "block";
+                    break
+                case 'mostra_prob':
+                    document.getElementById('div_aba_prob').style.display = "block";
+                    break
+                case 'mostra_arquivos':
+                    document.getElementById('div_aba_arquivos').style.display = "block";
+                    break
+                case 'mostra_melhorias':
+                    document.getElementById('div_aba_melhorias').style.display = "block";
+                    break
+                case 'mostra_config':
+                    document.getElementById('div_aba_config').style.display = "block";
+                    break
+                case 'mostra_analise':
+                    document.getElementById('div_aba_analise').style.display = "block";
+                    break
+            }
+        }
+        $(document).ready(function () {
+            $("#btnmostra").click(function () {
+                $("#mostra").toggle(200);
 
-  //mostra esconde aba
-  function mostrar_abas(obj) {
-
-    document.getElementById('div_aba_ajuda').style.display = "none";
-    document.getElementById('div_aba_prob').style.display = "none";
-    document.getElementById('div_aba_arquivos').style.display = "none";
-
-    document.getElementById('div_aba_melhorias').style.display = "none";
-    document.getElementById('div_aba_config').style.display = "none";
-    document.getElementById('div_aba_analise').style.display = "none";
-
-
-    switch (obj.id) {
-      case 'mostra_ajuda':
-        document.getElementById('div_aba_ajuda').style.display  = "block";
-        break
-      case 'mostra_prob':
-        document.getElementById('div_aba_prob').style.display = "block";
-        break
-      case 'mostra_arquivos':
-        document.getElementById('div_aba_arquivos').style.display = "block";
-        break
-      case 'mostra_melhorias':
-        document.getElementById('div_aba_melhorias').style.display = "block";
-        break
-      case 'mostra_config':
-        document.getElementById('div_aba_config').style.display = "block";
-        break
-      case 'mostra_analise':
-        document.getElementById('div_aba_analise').style.display = "block";
-        break
-    }
-  }
+                $("btnajuda").click(function () {
+                    $("mostraajuda").toggle(200);
+                })
+            });
+        });
 
 
-
-
-
-  $(document).ready(function(){
-    $("#btnmostra").click(function(){
-    $("#mostra").toggle(200);
-
-    $("btnajuda").click(function(){
-      $("mostraajuda").toggle(200);
-    })
-});
-});
-
-
-</script>
+    </script>
 </body>
 
 <!-- Mirrored from localhost.megasuporte.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Mar 2020 01:02:04 GMT -->
+
 </html>
