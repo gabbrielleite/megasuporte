@@ -581,7 +581,7 @@ body .navbar-toggler span {
   font-size: 18px
 }
 .infoServico {
-  position: fixed;
+  /* position: fixed; */
   z-index: 9;
   width: 100%;
   padding: 5px 15px 10px 170px;
@@ -624,7 +624,7 @@ body .navbar-toggler span {
 }
 .content {
   width: calc(100% - 200px);
-  margin: 110px 0 0 170px;
+  margin: 30px 0 0 170px;
   overflow: hidden;
   padding-bottom: 50px
 }
@@ -1438,7 +1438,7 @@ body .navbar-toggler span {
   }
   .content {
     width: 100%;
-    margin: 120px 0 0 0;
+    margin: 0px;
     padding: 15px 15px 0 15px
   }
   .content.contato {
@@ -1902,7 +1902,7 @@ input:required {
     }
 
     .servlinksMobile {
-      width: 43px;
+      width: 35px;
       float: left;
       margin-right: 10px;
       /* border: 1px solid #fff; */
@@ -1926,10 +1926,15 @@ input:required {
     top: 66px;
     width: 100%;
     height: auto;
-    z-index: 9999;
-
-
+    z-index: 999;
   }
+ .menuflutuanteMobile h5{  
+  font-size: 1rem !important;
+ }
+
+ .divvalor{
+   display: none;
+ }
 }
 
 @media (min-width: 768px) {
