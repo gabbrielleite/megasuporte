@@ -581,7 +581,7 @@ body .navbar-toggler span {
   font-size: 18px
 }
 .infoServico {
-  /* position: fixed; */
+  position: relative;
   z-index: 9;
   width: 100%;
   padding: 5px 15px 10px 170px;
@@ -623,10 +623,16 @@ body .navbar-toggler span {
   color: #fff !important
 }
 .content {
-  width: calc(100% - 200px);
-  margin: 30px 0 0 170px;
+  /* width: calc(100% - 200px);
+  margin: 110px 0 0 170px; */
+
+  width: calc(100% - 28px);
+  margin: 30px 0 0 18px;
   overflow: hidden;
   padding-bottom: 50px
+
+
+ 
 }
 .content .imageTop {
   position: relative;
@@ -1438,7 +1444,7 @@ body .navbar-toggler span {
   }
   .content {
     width: 100%;
-    margin: 0px;
+    margin: 0px 0 0 0;
     padding: 15px 15px 0 15px
   }
   .content.contato {
@@ -1446,7 +1452,7 @@ body .navbar-toggler span {
   }
   .infoServico {
     padding: 15px;
-    top: 104px
+    
   }
   .infoServico h1 {
     font-size: 16px;
@@ -1883,7 +1889,7 @@ input:required {
 
 .menususpenso {
   position: absolute;
-  top: 119px;
+  top: 116px;
   width: 161px;
   height: auto;
   z-index: 999;
@@ -1931,10 +1937,12 @@ input:required {
  .menuflutuanteMobile h5{  
   font-size: 1rem !important;
  }
-
- .divvalor{
-   display: none;
- }
+ .divvalorMobile {
+  display: block;
+}
+.divvalor {
+  display: none;
+}
 }
 
 @media (min-width: 768px) {
@@ -1945,10 +1953,9 @@ input:required {
   .menuflutuanteMobile{
     display: none;
   }
-  
-
-    
-  
+  .divvalorMobile {
+    display: none;
+  }
   }
  
 }
@@ -2118,9 +2125,12 @@ input:required {
   position: relative;
   padding-top: 0.1rem; }
   .itemmenususpenso h5 {
-    padding-top: 10px;
+    padding-top: 2px;
     font-size: 1rem !important; }
- 
+
+ .fa-2x{
+  font-size: 1.7rem !important;
+ }
 
 .btnitemaba {
   background: #092932;
@@ -2158,7 +2168,7 @@ span.divvalor {
   color: #42aee3;
   border: 0px;
   /* border-radius: 10px; */
-  padding: 11px 21px ; 
+  padding: 10px 21px ; 
   
 }
 
